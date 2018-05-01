@@ -1,0 +1,14 @@
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\WaterCons.Library.dll.config
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\WaterCons.Library.dll
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\WaterCons.Library.pdb
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\EntityFramework.dll
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\MySql.Data.dll
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\EntityFramework.xml
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\bin\Debug\MySql.Data.xml
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\obj\Debug\WaterCons.Library.csproj.CoreCompileInputs.cache
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\obj\Debug\WaterCons.Library.dll
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\obj\Debug\WaterCons.Library.pdb
+C:\SKYNET\SKYNET\WATERCONS\CurrentVersion\WaterCons\WaterCons.Library\obj\Debug\WaterCons.Library.csprojResolveAssemblyReference.cache

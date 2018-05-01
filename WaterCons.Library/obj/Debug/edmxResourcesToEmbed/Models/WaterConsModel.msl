@@ -1,0 +1,1420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="waterconsModelStoreContainer" CdmEntityContainer="waterconsEntities">
+    <EntitySetMapping Name="accounts">
+      <EntityTypeMapping TypeName="waterconsModel.account">
+        <MappingFragment StoreEntitySet="accounts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AccountHolderID" ColumnName="AccountHolderID" />
+          <ScalarProperty Name="AccountHolderOrg" ColumnName="AccountHolderOrg" />
+          <ScalarProperty Name="SICCode" ColumnName="SICCode" />
+          <ScalarProperty Name="NAICSCode" ColumnName="NAICSCode" />
+          <ScalarProperty Name="RevenueClass" ColumnName="RevenueClass" />
+          <ScalarProperty Name="OpenedDate" ColumnName="OpenedDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="HasLien" ColumnName="HasLien" />
+          <ScalarProperty Name="Affadavit" ColumnName="Affadavit" />
+          <ScalarProperty Name="PayNoPay" ColumnName="PayNoPay" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="LockUpdate" ColumnName="LockUpdate" />
+          <ScalarProperty Name="CreateFlag" ColumnName="CreateFlag" />
+          <ScalarProperty Name="OldAccountNumber" ColumnName="OldAccountNumber" />
+          <ScalarProperty Name="CAP" ColumnName="CAP" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="FlowFactor" ColumnName="FlowFactor" />
+          <ScalarProperty Name="LowIncome" ColumnName="LowIncome" />
+          <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="advertisementcases">
+      <EntityTypeMapping TypeName="waterconsModel.advertisementcas">
+        <MappingFragment StoreEntitySet="advertisementcases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="AdStartDate" ColumnName="AdStartDate" />
+          <ScalarProperty Name="AdEndDate" ColumnName="AdEndDate" />
+          <ScalarProperty Name="AdType" ColumnName="AdType" />
+          <ScalarProperty Name="PlacedBy" ColumnName="PlacedBy" />
+          <ScalarProperty Name="PublicationName" ColumnName="PublicationName" />
+          <ScalarProperty Name="PublicationCirculation" ColumnName="PublicationCirculation" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="CostIndiviualRate" ColumnName="CostIndiviualRate" />
+          <ScalarProperty Name="CostGroupRate" ColumnName="CostGroupRate" />
+          <ScalarProperty Name="TopicOfFocus" ColumnName="TopicOfFocus" />
+          <ScalarProperty Name="GeographicTargetedAreas" ColumnName="GeographicTargetedAreas" />
+          <ScalarProperty Name="TargetAudience" ColumnName="TargetAudience" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="applicationmenus">
+      <EntityTypeMapping TypeName="waterconsModel.applicationmenu">
+        <MappingFragment StoreEntitySet="applicationmenu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Route" ColumnName="Route" />
+          <ScalarProperty Name="Module" ColumnName="Module" />
+          <ScalarProperty Name="MenuOrder" ColumnName="MenuOrder" />
+          <ScalarProperty Name="RequiresAuthenication" ColumnName="RequiresAuthenication" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="campaigncases">
+      <EntityTypeMapping TypeName="waterconsModel.campaigncas">
+        <MappingFragment StoreEntitySet="campaigncases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="AdStartDate" ColumnName="AdStartDate" />
+          <ScalarProperty Name="AdEndDate" ColumnName="AdEndDate" />
+          <ScalarProperty Name="AdType" ColumnName="AdType" />
+          <ScalarProperty Name="PlacedBy" ColumnName="PlacedBy" />
+          <ScalarProperty Name="PublicationName" ColumnName="PublicationName" />
+          <ScalarProperty Name="PublicationCirculation" ColumnName="PublicationCirculation" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="CostIndiviualRate" ColumnName="CostIndiviualRate" />
+          <ScalarProperty Name="CostGroupRate" ColumnName="CostGroupRate" />
+          <ScalarProperty Name="TopicOfFocus" ColumnName="TopicOfFocus" />
+          <ScalarProperty Name="GeographicTargetedAreas" ColumnName="GeographicTargetedAreas" />
+          <ScalarProperty Name="TargetAudience" ColumnName="TargetAudience" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="campaignmaterials">
+      <EntityTypeMapping TypeName="waterconsModel.campaignmaterial">
+        <MappingFragment StoreEntitySet="campaignmaterials">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CAMCaseID" ColumnName="CAMCaseID" />
+          <ScalarProperty Name="AttendeeID" ColumnName="AttendeeID" />
+          <ScalarProperty Name="Fixturename" ColumnName="Fixturename" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="casecontacts">
+      <EntityTypeMapping TypeName="waterconsModel.casecontact">
+        <MappingFragment StoreEntitySet="casecontacts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="PeopleID" ColumnName="PeopleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cases">
+      <EntityTypeMapping TypeName="waterconsModel.case">
+        <MappingFragment StoreEntitySet="cases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="PhaseID" ColumnName="PhaseID" />
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerOrgID" ColumnName="OwnerOrgID" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="InspectorID" ColumnName="InspectorID" />
+          <ScalarProperty Name="OriginalCaseNumber" ColumnName="OriginalCaseNumber" />
+          <ScalarProperty Name="ApplicationNumber" ColumnName="ApplicationNumber" />
+          <ScalarProperty Name="OwnOrRent" ColumnName="OwnOrRent" />
+          <ScalarProperty Name="AwareOfProgram" ColumnName="AwareOfProgram" />
+          <ScalarProperty Name="WaterUsage" ColumnName="WaterUsage" />
+          <ScalarProperty Name="StepID" ColumnName="StepID" />
+          <ScalarProperty Name="StepDate" ColumnName="StepDate" />
+          <ScalarProperty Name="StepDateNext" ColumnName="StepDateNext" />
+          <ScalarProperty Name="FundingType" ColumnName="FundingType" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="ReceiptsAttached" ColumnName="ReceiptsAttached" />
+          <ScalarProperty Name="BillsAttached" ColumnName="BillsAttached" />
+          <ScalarProperty Name="ApplicationProvided" ColumnName="ApplicationProvided" />
+          <ScalarProperty Name="ApplicationRequired" ColumnName="ApplicationRequired" />
+          <ScalarProperty Name="ApplicationReturnedReason" ColumnName="ApplicationReturnedReason" />
+          <ScalarProperty Name="RejectionReason" ColumnName="RejectionReason" />
+          <ScalarProperty Name="PotentialReturn" ColumnName="PotentialReturn" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="WalkAway" ColumnName="WalkAway" />
+          <ScalarProperty Name="WalkAwayReason" ColumnName="WalkAwayReason" />
+          <ScalarProperty Name="OtherProgramInterest" ColumnName="OtherProgramInterest" />
+          <ScalarProperty Name="FurtherAssistanceNeeded" ColumnName="FurtherAssistanceNeeded" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Recommendations" ColumnName="Recommendations" />
+          <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+          <ScalarProperty Name="SSNOrID" ColumnName="SSNOrID" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="RebateCheckSSNOrID" ColumnName="RebateCheckSSNOrID" />
+          <ScalarProperty Name="RebateCheckBill" ColumnName="RebateCheckBill" />
+          <ScalarProperty Name="RebateCheckReceipt" ColumnName="RebateCheckReceipt" />
+          <ScalarProperty Name="InspectionRequired" ColumnName="InspectionRequired" />
+          <ScalarProperty Name="Inspected" ColumnName="Inspected" />
+          <ScalarProperty Name="InspectionPassFail" ColumnName="InspectionPassFail" />
+          <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
+          <ScalarProperty Name="CertificationDate" ColumnName="CertificationDate" />
+          <ScalarProperty Name="Verified" ColumnName="Verified" />
+          <ScalarProperty Name="VerificationMethod" ColumnName="VerificationMethod" />
+          <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+          <ScalarProperty Name="OtherInspectorName" ColumnName="OtherInspectorName" />
+          <ScalarProperty Name="Document" ColumnName="Document" />
+          <ScalarProperty Name="SurveySent" ColumnName="SurveySent" />
+          <ScalarProperty Name="SurveyCompleted" ColumnName="SurveyCompleted" />
+          <ScalarProperty Name="OTUWNum" ColumnName="OTUWNum" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="ROCCertified" ColumnName="ROCCertified" />
+          <ScalarProperty Name="ROCCertifiedDate" ColumnName="ROCCertifiedDate" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="DocNum" ColumnName="DocNum" />
+          <ScalarProperty Name="YearBuilt" ColumnName="YearBuilt" />
+          <ScalarProperty Name="BathTot" ColumnName="BathTot" />
+          <ScalarProperty Name="RCCase" ColumnName="RCCase" />
+          <ScalarProperty Name="RCStatus" ColumnName="RCStatus" />
+          <ScalarProperty Name="AssignedProjectID" ColumnName="AssignedProjectID" />
+          <ScalarProperty Name="RCTotalWaterSavings" ColumnName="RCTotalWaterSavings" />
+          <ScalarProperty Name="Responsible" ColumnName="Responsible" />
+          <ScalarProperty Name="WDOGreenCreditMultiplier" ColumnName="WDOGreenCreditMultiplier" />
+          <ScalarProperty Name="WDOTotalOffsetRequired" ColumnName="WDOTotalOffsetRequired" />
+          <ScalarProperty Name="RejectReasons" ColumnName="RejectReasons" />
+          <ScalarProperty Name="CreditAssigned" ColumnName="CreditAssigned" />
+          <ScalarProperty Name="EscrowNumber" ColumnName="EscrowNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Photo1" ColumnName="Photo1" />
+          <ScalarProperty Name="Photo2" ColumnName="Photo2" />
+          <ScalarProperty Name="Photo3" ColumnName="Photo3" />
+          <ScalarProperty Name="Photo4" ColumnName="Photo4" />
+          <ScalarProperty Name="Photo5" ColumnName="Photo5" />
+          <ScalarProperty Name="Photo6" ColumnName="Photo6" />
+          <ScalarProperty Name="Photo7" ColumnName="Photo7" />
+          <ScalarProperty Name="Photo8" ColumnName="Photo8" />
+          <ScalarProperty Name="RUSInspector" ColumnName="RUSInspector" />
+          <ScalarProperty Name="RUSEscrowAgent" ColumnName="RUSEscrowAgent" />
+          <ScalarProperty Name="RUSRealtor" ColumnName="RUSRealtor" />
+          <ScalarProperty Name="RUSOther" ColumnName="RUSOther" />
+          <ScalarProperty Name="CAPType" ColumnName="CAPType" />
+          <ScalarProperty Name="HowDidYouHear" ColumnName="HowDidYouHear" />
+          <ScalarProperty Name="ReasonforParticipation" ColumnName="ReasonforParticipation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cities">
+      <EntityTypeMapping TypeName="waterconsModel.city">
+        <MappingFragment StoreEntitySet="cities">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="City1" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientgridfields">
+      <EntityTypeMapping TypeName="waterconsModel.clientgridfield">
+        <MappingFragment StoreEntitySet="clientgridfields">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CodeText" ColumnName="CodeText" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FieldOrder" ColumnName="FieldOrder" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="WordWrap" ColumnName="WordWrap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="waterconsModel.client">
+        <MappingFragment StoreEntitySet="clients">
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="NextAutoPayDate" ColumnName="NextAutoPayDate" />
+          <ScalarProperty Name="AutoPaySchedule" ColumnName="AutoPaySchedule" />
+          <ScalarProperty Name="AllowAutoPay" ColumnName="AllowAutoPay" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="TermsAccepted" ColumnName="TermsAccepted" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="consumptions">
+      <EntityTypeMapping TypeName="waterconsModel.consumption">
+        <MappingFragment StoreEntitySet="consumptions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="ConsumptionDate" ColumnName="ConsumptionDate" />
+          <ScalarProperty Name="Consumption1" ColumnName="Consumption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contacts">
+      <EntityTypeMapping TypeName="waterconsModel.contact">
+        <MappingFragment StoreEntitySet="contacts">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Responded" ColumnName="Responded" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Zipcode" ColumnName="Zipcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="AllowNewsLetter" ColumnName="AllowNewsLetter" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deviceefficiencylevels">
+      <EntityTypeMapping TypeName="waterconsModel.deviceefficiencylevel">
+        <MappingFragment StoreEntitySet="deviceefficiencylevels">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="DeviceTypeID" ColumnName="DeviceTypeID" />
+          <ScalarProperty Name="EffLevelName" ColumnName="EffLevelName" />
+          <ScalarProperty Name="EffLevelType" ColumnName="EffLevelType" />
+          <ScalarProperty Name="EffLevelValue" ColumnName="EffLevelValue" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="devicemodels">
+      <EntityTypeMapping TypeName="waterconsModel.devicemodel">
+        <MappingFragment StoreEntitySet="devicemodels">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="DeviceModelNumber" ColumnName="DeviceModelNumber" />
+          <ScalarProperty Name="DeviceTypeID" ColumnName="DeviceTypeID" />
+          <ScalarProperty Name="EffLevelID" ColumnName="EffLevelID" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="IsNewDefault" ColumnName="IsNewDefault" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="FlowRate" ColumnName="FlowRate" />
+          <ScalarProperty Name="ToiletGPF" ColumnName="ToiletGPF" />
+          <ScalarProperty Name="ToiletAdaCompliant" ColumnName="ToiletAdaCompliant" />
+          <ScalarProperty Name="ToiletUlfCompliant" ColumnName="ToiletUlfCompliant" />
+          <ScalarProperty Name="ToiletFlushType" ColumnName="ToiletFlushType" />
+          <ScalarProperty Name="CwMEF" ColumnName="CwMEF" />
+          <ScalarProperty Name="CwWF" ColumnName="CwWF" />
+          <ScalarProperty Name="XRayFilProType" ColumnName="XRayFilProType" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ShowInSurvey" ColumnName="ShowInSurvey" />
+          <ScalarProperty Name="MostEfficient" ColumnName="MostEfficient" />
+          <ScalarProperty Name="ShowerHeadType" ColumnName="ShowerHeadType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="devices">
+      <EntityTypeMapping TypeName="waterconsModel.device">
+        <MappingFragment StoreEntitySet="devices">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="DeviceModelID" ColumnName="DeviceModelID" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ModelYear" ColumnName="ModelYear" />
+          <ScalarProperty Name="CanRetrofit" ColumnName="CanRetrofit" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="OperationalUse" ColumnName="OperationalUse" />
+          <ScalarProperty Name="EasilyAccessed" ColumnName="EasilyAccessed" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="PurchaseStore" ColumnName="PurchaseStore" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="StoreNumber" ColumnName="StoreNumber" />
+          <ScalarProperty Name="VoucherNumber" ColumnName="VoucherNumber" />
+          <ScalarProperty Name="VoucherAmount" ColumnName="VoucherAmount" />
+          <ScalarProperty Name="VoucherRedeemDate" ColumnName="VoucherRedeemDate" />
+          <ScalarProperty Name="VoucherExpireDate" ColumnName="VoucherExpireDate" />
+          <ScalarProperty Name="IsLeaking" ColumnName="IsLeaking" />
+          <ScalarProperty Name="HoursUseDay" ColumnName="HoursUseDay" />
+          <ScalarProperty Name="ControllerStationsTotal" ColumnName="ControllerStationsTotal" />
+          <ScalarProperty Name="ControllerStationsInUse" ColumnName="ControllerStationsInUse" />
+          <ScalarProperty Name="PressureRegulatorPsi" ColumnName="PressureRegulatorPsi" />
+          <ScalarProperty Name="Gpm" ColumnName="Gpm" />
+          <ScalarProperty Name="Gpf" ColumnName="Gpf" />
+          <ScalarProperty Name="WF" ColumnName="WF" />
+          <ScalarProperty Name="HasAerator" ColumnName="HasAerator" />
+          <ScalarProperty Name="Leaks" ColumnName="Leaks" />
+          <ScalarProperty Name="Drips" ColumnName="Drips" />
+          <ScalarProperty Name="LowFlow" ColumnName="LowFlow" />
+          <ScalarProperty Name="LeakingAtFlapper" ColumnName="LeakingAtFlapper" />
+          <ScalarProperty Name="FillValveFaulty" ColumnName="FillValveFaulty" />
+          <ScalarProperty Name="PassFail" ColumnName="PassFail" />
+          <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+          <ScalarProperty Name="ImportIDs" ColumnName="ImportIDs" />
+          <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="devicetypes">
+      <EntityTypeMapping TypeName="waterconsModel.devicetype">
+        <MappingFragment StoreEntitySet="devicetypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NamePlural" ColumnName="NamePlural" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="DefaultSavingsFactor" ColumnName="DefaultSavingsFactor" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="documentations">
+      <EntityTypeMapping TypeName="waterconsModel.documentation">
+        <MappingFragment StoreEntitySet="documentations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="documentcontents">
+      <EntityTypeMapping TypeName="waterconsModel.documentcontent">
+        <MappingFragment StoreEntitySet="documentcontents">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="documentuploads">
+      <EntityTypeMapping TypeName="waterconsModel.documentupload">
+        <MappingFragment StoreEntitySet="documentuploads">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="educationalmaterials">
+      <EntityTypeMapping TypeName="waterconsModel.educationalmaterial">
+        <MappingFragment StoreEntitySet="educationalmaterials">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="EduCaseID" ColumnName="EduCaseID" />
+          <ScalarProperty Name="DistributionDate" ColumnName="DistributionDate" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="LocationType" ColumnName="LocationType" />
+          <ScalarProperty Name="PreparedBy" ColumnName="PreparedBy" />
+          <ScalarProperty Name="ContactPersonID" ColumnName="ContactPersonID" />
+          <ScalarProperty Name="GeographicArea" ColumnName="GeographicArea" />
+          <ScalarProperty Name="MaterialSent1" ColumnName="MaterialSent1" />
+          <ScalarProperty Name="Quantity1" ColumnName="Quantity1" />
+          <ScalarProperty Name="MaterialSent2" ColumnName="MaterialSent2" />
+          <ScalarProperty Name="Quantity2" ColumnName="Quantity2" />
+          <ScalarProperty Name="MaterialSent3" ColumnName="MaterialSent3" />
+          <ScalarProperty Name="Quantity3" ColumnName="Quantity3" />
+          <ScalarProperty Name="MaterialSent4" ColumnName="MaterialSent4" />
+          <ScalarProperty Name="Quantity4" ColumnName="Quantity4" />
+          <ScalarProperty Name="MaterialSent5" ColumnName="MaterialSent5" />
+          <ScalarProperty Name="Quantity5" ColumnName="Quantity5" />
+          <ScalarProperty Name="MaterialSent6" ColumnName="MaterialSent6" />
+          <ScalarProperty Name="Quantity6" ColumnName="Quantity6" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="educationalvisitattendees">
+      <EntityTypeMapping TypeName="waterconsModel.educationalvisitattendee">
+        <MappingFragment StoreEntitySet="educationalvisitattendees">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EduCaseID" ColumnName="EduCaseID" />
+          <ScalarProperty Name="AttendeeName" ColumnName="AttendeeName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="NoOfResidents" ColumnName="NoOfResidents" />
+          <ScalarProperty Name="AwareProgram" ColumnName="AwareProgram" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="educationalvisitcases">
+      <EntityTypeMapping TypeName="waterconsModel.educationalvisitcas">
+        <MappingFragment StoreEntitySet="educationalvisitcases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="PlannedVisitDate" ColumnName="PlannedVisitDate" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="Presenter" ColumnName="Presenter" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="ContactPersonID" ColumnName="ContactPersonID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="NoOfAtendees" ColumnName="NoOfAtendees" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CommDist" ColumnName="CommDist" />
+          <ScalarProperty Name="SubDivComName" ColumnName="SubDivComName" />
+          <ScalarProperty Name="SubDivLegName" ColumnName="SubDivLegName" />
+          <ScalarProperty Name="WMDwaterManDisct" ColumnName="WMDwaterManDisct" />
+          <ScalarProperty Name="OrganizationType" ColumnName="OrganizationType" />
+          <ScalarProperty Name="Youth" ColumnName="Youth" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="SchoolAddress" ColumnName="SchoolAddress" />
+          <ScalarProperty Name="AdultType" ColumnName="AdultType" />
+          <ScalarProperty Name="EICLocation" ColumnName="EICLocation" />
+          <ScalarProperty Name="Partnership" ColumnName="Partnership" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CostPerMaterial" ColumnName="CostPerMaterial" />
+          <ScalarProperty Name="ExtendedCost" ColumnName="ExtendedCost" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="events">
+      <EntityTypeMapping TypeName="waterconsModel.event">
+        <MappingFragment StoreEntitySet="events">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ActionTypeID" ColumnName="ActionTypeID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="ResponsibleID" ColumnName="ResponsibleID" />
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="TargetDateEnd" ColumnName="TargetDateEnd" />
+          <ScalarProperty Name="ActualDate" ColumnName="ActualDate" />
+          <ScalarProperty Name="ActualDateEnd" ColumnName="ActualDateEnd" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="PreviousStepID" ColumnName="PreviousStepID" />
+          <ScalarProperty Name="PreviousStepName" ColumnName="PreviousStepName" />
+          <ScalarProperty Name="NewStepID" ColumnName="NewStepID" />
+          <ScalarProperty Name="NewStepName" ColumnName="NewStepName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="StepChangeDate" ColumnName="StepChangeDate" />
+          <ScalarProperty Name="LandscapeInspected" ColumnName="LandscapeInspected" />
+          <ScalarProperty Name="NumUnitsSurveyed" ColumnName="NumUnitsSurveyed" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="EventTimeRange" ColumnName="EventTimeRange" />
+          <ScalarProperty Name="DevicesInstalled" ColumnName="DevicesInstalled" />
+          <ScalarProperty Name="ClothesWasher" ColumnName="ClothesWasher" />
+          <ScalarProperty Name="LeakDetected" ColumnName="LeakDetected" />
+          <ScalarProperty Name="DevicesPostInspected" ColumnName="DevicesPostInspected" />
+          <ScalarProperty Name="InspectorID" ColumnName="InspectorID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="generalsettings">
+      <EntityTypeMapping TypeName="waterconsModel.generalsetting">
+        <MappingFragment StoreEntitySet="generalsettings">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="AllowPropertyEditing" ColumnName="AllowPropertyEditing" />
+          <ScalarProperty Name="ShowActivePhasesOnly" ColumnName="ShowActivePhasesOnly" />
+          <ScalarProperty Name="LandingPage" ColumnName="LandingPage" />
+          <ScalarProperty Name="NewCaseDefaultPhase" ColumnName="NewCaseDefaultPhase" />
+          <ScalarProperty Name="DateLastBillingUpdate" ColumnName="DateLastBillingUpdate" />
+          <ScalarProperty Name="DateNextPlannedBillingUpdate" ColumnName="DateNextPlannedBillingUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gridfields">
+      <EntityTypeMapping TypeName="waterconsModel.gridfield">
+        <MappingFragment StoreEntitySet="gridfields">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CodeText" ColumnName="CodeText" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FieldOrder" ColumnName="FieldOrder" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="WordWrap" ColumnName="WordWrap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="interventions">
+      <EntityTypeMapping TypeName="waterconsModel.intervention">
+        <MappingFragment StoreEntitySet="interventions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="InterventionTypeID" ColumnName="InterventionTypeID" />
+          <ScalarProperty Name="MaterialCost" ColumnName="MaterialCost" />
+          <ScalarProperty Name="LaborCost" ColumnName="LaborCost" />
+          <ScalarProperty Name="Subsidy" ColumnName="Subsidy" />
+          <ScalarProperty Name="InterventionDate" ColumnName="InterventionDate" />
+          <ScalarProperty Name="Repetitions" ColumnName="Repetitions" />
+          <ScalarProperty Name="Responsible" ColumnName="Responsible" />
+          <ScalarProperty Name="PredictedWaterSavings" ColumnName="PredictedWaterSavings" />
+          <ScalarProperty Name="WorkOrderNum" ColumnName="WorkOrderNum" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="FundingType" ColumnName="FundingType" />
+          <ScalarProperty Name="NewDeviceID" ColumnName="NewDeviceID" />
+          <ScalarProperty Name="OldDeviceID" ColumnName="OldDeviceID" />
+          <ScalarProperty Name="ProcessImpName" ColumnName="ProcessImpName" />
+          <ScalarProperty Name="ProcessImpDescription" ColumnName="ProcessImpDescription" />
+          <ScalarProperty Name="ProcessImpType" ColumnName="ProcessImpType" />
+          <ScalarProperty Name="WaterBroomAreaToClean" ColumnName="WaterBroomAreaToClean" />
+          <ScalarProperty Name="UnitNo" ColumnName="UnitNo" />
+          <ScalarProperty Name="IncludeInActualSavingsCalc" ColumnName="IncludeInActualSavingsCalc" />
+          <ScalarProperty Name="TotalRecieptAmount" ColumnName="TotalRecieptAmount" />
+          <ScalarProperty Name="TotalDeviceCost" ColumnName="TotalDeviceCost" />
+          <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="irrigationalcases">
+      <EntityTypeMapping TypeName="waterconsModel.irrigationalcas">
+        <MappingFragment StoreEntitySet="irrigationalcases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="IrrigationType" ColumnName="IrrigationType" />
+          <ScalarProperty Name="ControllerProgrammer" ColumnName="ControllerProgrammer" />
+          <ScalarProperty Name="GardenerID" ColumnName="GardenerID" />
+          <ScalarProperty Name="ControllerProgrammerDates" ColumnName="ControllerProgrammerDates" />
+          <ScalarProperty Name="StickerPosted" ColumnName="StickerPosted" />
+          <ScalarProperty Name="EducationalPacketGiven" ColumnName="EducationalPacketGiven" />
+          <ScalarProperty Name="OrdinanceInfoDiscussed" ColumnName="OrdinanceInfoDiscussed" />
+          <ScalarProperty Name="WaterUsageReviewed" ColumnName="WaterUsageReviewed" />
+          <ScalarProperty Name="IrrigationIssuesReviewed" ColumnName="IrrigationIssuesReviewed" />
+          <ScalarProperty Name="RunoffOnSite" ColumnName="RunoffOnSite" />
+          <ScalarProperty Name="DeviceInstalled" ColumnName="DeviceInstalled" />
+          <ScalarProperty Name="DeviceFunctioning" ColumnName="DeviceFunctioning" />
+          <ScalarProperty Name="LandscapeHealthImproved" ColumnName="LandscapeHealthImproved" />
+          <ScalarProperty Name="IrrigationIssuesAddressed" ColumnName="IrrigationIssuesAddressed" />
+          <ScalarProperty Name="RunoffReduction" ColumnName="RunoffReduction" />
+          <ScalarProperty Name="UsageRank" ColumnName="UsageRank" />
+          <ScalarProperty Name="AnnUsage" ColumnName="AnnUsage" />
+          <ScalarProperty Name="InstallerName" ColumnName="InstallerName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="NumberOfFlags" ColumnName="NumberOfFlags" />
+          <ScalarProperty Name="LandscapedArea" ColumnName="LandscapedArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="listitems">
+      <EntityTypeMapping TypeName="waterconsModel.listitem">
+        <MappingFragment StoreEntitySet="listitems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="FieldOrder" ColumnName="FieldOrder" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="meterreads">
+      <EntityTypeMapping TypeName="waterconsModel.meterread">
+        <MappingFragment StoreEntitySet="meterreads">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+          <ScalarProperty Name="Reading" ColumnName="Reading" />
+          <ScalarProperty Name="Consumption" ColumnName="Consumption" />
+          <ScalarProperty Name="ReadCode" ColumnName="ReadCode" />
+          <ScalarProperty Name="CustMtrReadKeyID" ColumnName="CustMtrReadKeyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="newslettercontacts">
+      <EntityTypeMapping TypeName="waterconsModel.newslettercontact">
+        <MappingFragment StoreEntitySet="newslettercontacts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NewsLetterID" ColumnName="NewsLetterID" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="SentBy" ColumnName="SentBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="newsletters">
+      <EntityTypeMapping TypeName="waterconsModel.newsletter">
+        <MappingFragment StoreEntitySet="newsletters">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NewsLetterContent" ColumnName="NewsLetterContent" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="organizations">
+      <EntityTypeMapping TypeName="waterconsModel.organization">
+        <MappingFragment StoreEntitySet="organizations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Attn" ColumnName="Attn" />
+          <ScalarProperty Name="Street1" ColumnName="Street1" />
+          <ScalarProperty Name="Street2" ColumnName="Street2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="PhoneArea" ColumnName="PhoneArea" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="FaxArea" ColumnName="FaxArea" />
+          <ScalarProperty Name="Webpage" ColumnName="Webpage" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="people">
+      <EntityTypeMapping TypeName="waterconsModel.person">
+        <MappingFragment StoreEntitySet="people">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Attn" ColumnName="Attn" />
+          <ScalarProperty Name="Street1" ColumnName="Street1" />
+          <ScalarProperty Name="Street2" ColumnName="Street2" />
+          <ScalarProperty Name="Street3" ColumnName="Street3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="HomePhoneArea" ColumnName="HomePhoneArea" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="WorkPhoneArea" ColumnName="WorkPhoneArea" />
+          <ScalarProperty Name="Cell" ColumnName="Cell" />
+          <ScalarProperty Name="CellArea" ColumnName="CellArea" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="FaxArea" ColumnName="FaxArea" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ContactMethod" ColumnName="ContactMethod" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+          <ScalarProperty Name="ImportBlockNo" ColumnName="ImportBlockNo" />
+          <ScalarProperty Name="ImportLotNo" ColumnName="ImportLotNo" />
+          <ScalarProperty Name="ImportAccountNumber" ColumnName="ImportAccountNumber" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ImportCaseID" ColumnName="ImportCaseID" />
+          <ScalarProperty Name="PremiseNumber" ColumnName="PremiseNumber" />
+          <ScalarProperty Name="ParcelNumber" ColumnName="ParcelNumber" />
+          <ScalarProperty Name="SSNNumber" ColumnName="SSNNumber" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="LockUpdate" ColumnName="LockUpdate" />
+          <ScalarProperty Name="EducationalVisitID" ColumnName="EducationalVisitID" />
+          <ScalarProperty Name="TempAccountNumber" ColumnName="TempAccountNumber" />
+          <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="peoplepeopletypes">
+      <EntityTypeMapping TypeName="waterconsModel.peoplepeopletype">
+        <MappingFragment StoreEntitySet="peoplepeopletype">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PeopleID" ColumnName="PeopleID" />
+          <ScalarProperty Name="PeopleTypeID" ColumnName="PeopleTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="peopletypes">
+      <EntityTypeMapping TypeName="waterconsModel.peopletype">
+        <MappingFragment StoreEntitySet="peopletypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phases">
+      <EntityTypeMapping TypeName="waterconsModel.phase">
+        <MappingFragment StoreEntitySet="phases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="PredictedWaterSavings" ColumnName="PredictedWaterSavings" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="programdevicemodels">
+      <EntityTypeMapping TypeName="waterconsModel.programdevicemodel">
+        <MappingFragment StoreEntitySet="programdevicemodels">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="DeviceModelID" ColumnName="DeviceModelID" />
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="programdevicetypes">
+      <EntityTypeMapping TypeName="waterconsModel.programdevicetype">
+        <MappingFragment StoreEntitySet="programdevicetypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="DeviceTypeID" ColumnName="DeviceTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="programinterventiontypes">
+      <EntityTypeMapping TypeName="waterconsModel.programinterventiontype">
+        <MappingFragment StoreEntitySet="programinterventiontypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="InterventionTypeID" ColumnName="InterventionTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="programs">
+      <EntityTypeMapping TypeName="waterconsModel.program">
+        <MappingFragment StoreEntitySet="programs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IncludeInMatrix" ColumnName="IncludeInMatrix" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="OwnerDefaultParticipant" ColumnName="OwnerDefaultParticipant" />
+          <ScalarProperty Name="Modules" ColumnName="Modules" />
+          <ScalarProperty Name="FundingType" ColumnName="FundingType" />
+          <ScalarProperty Name="Incentives" ColumnName="Incentives" />
+          <ScalarProperty Name="DefaultRCCase" ColumnName="DefaultRCCase" />
+          <ScalarProperty Name="DefaultWDOCandidateDeviceType" ColumnName="DefaultWDOCandidateDeviceType" />
+          <ScalarProperty Name="VoucherValidDays" ColumnName="VoucherValidDays" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="EditRetrofitPage" ColumnName="EditRetrofitPage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="programsteps">
+      <EntityTypeMapping TypeName="waterconsModel.programstep">
+        <MappingFragment StoreEntitySet="programsteps">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DaysToNext" ColumnName="DaysToNext" />
+          <ScalarProperty Name="DaysToExpire" ColumnName="DaysToExpire" />
+          <ScalarProperty Name="DaysToNotify" ColumnName="DaysToNotify" />
+          <ScalarProperty Name="NextStepID" ColumnName="NextStepID" />
+          <ScalarProperty Name="NestStepName" ColumnName="NestStepName" />
+          <ScalarProperty Name="StepOrder" ColumnName="StepOrder" />
+          <ScalarProperty Name="ActionTypeID" ColumnName="ActionTypeID" />
+          <ScalarProperty Name="ActionComments" ColumnName="ActionComments" />
+          <ScalarProperty Name="ActionReportName" ColumnName="ActionReportName" />
+          <ScalarProperty Name="ActionReportType" ColumnName="ActionReportType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="properties">
+      <EntityTypeMapping TypeName="waterconsModel.property">
+        <MappingFragment StoreEntitySet="properties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="RandomID" ColumnName="RandomID" />
+          <ScalarProperty Name="BlockNo" ColumnName="BlockNo" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="AccountBase" ColumnName="AccountBase" />
+          <ScalarProperty Name="PremiseNum" ColumnName="PremiseNum" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="APN" ColumnName="APN" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UnitNum" ColumnName="UnitNum" />
+          <ScalarProperty Name="StreetNo" ColumnName="StreetNo" />
+          <ScalarProperty Name="StreetNoFrom" ColumnName="StreetNoFrom" />
+          <ScalarProperty Name="StreetNoTo" ColumnName="StreetNoTo" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetSuffix" ColumnName="StreetSuffix" />
+          <ScalarProperty Name="StreetDir" ColumnName="StreetDir" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Jurisdiction" ColumnName="Jurisdiction" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="RegioninCountry" ColumnName="RegioninCountry" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="RegioninWorld" ColumnName="RegioninWorld" />
+          <ScalarProperty Name="ResidenceType" ColumnName="ResidenceType" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="UsageType" ColumnName="UsageType" />
+          <ScalarProperty Name="YearBuilt" ColumnName="YearBuilt" />
+          <ScalarProperty Name="PropertyTypeID" ColumnName="PropertyTypeID" />
+          <ScalarProperty Name="LandType" ColumnName="LandType" />
+          <ScalarProperty Name="NumOfUnits" ColumnName="NumOfUnits" />
+          <ScalarProperty Name="Certified" ColumnName="Certified" />
+          <ScalarProperty Name="LastAffidavitDate" ColumnName="LastAffidavitDate" />
+          <ScalarProperty Name="FloorNumber" ColumnName="FloorNumber" />
+          <ScalarProperty Name="Occupied" ColumnName="Occupied" />
+          <ScalarProperty Name="LotSize" ColumnName="LotSize" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NumOfOccupants" ColumnName="NumOfOccupants" />
+          <ScalarProperty Name="LowIncome" ColumnName="LowIncome" />
+          <ScalarProperty Name="FlowFactor" ColumnName="FlowFactor" />
+          <ScalarProperty Name="CityorSub" ColumnName="CityorSub" />
+          <ScalarProperty Name="ImportTapNo" ColumnName="ImportTapNo" />
+          <ScalarProperty Name="RestrictedDesc" ColumnName="RestrictedDesc" />
+          <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+          <ScalarProperty Name="ContactPersonID" ColumnName="ContactPersonID" />
+          <ScalarProperty Name="MasterType" ColumnName="MasterType" />
+          <ScalarProperty Name="ParcelSection" ColumnName="ParcelSection" />
+          <ScalarProperty Name="ParcelTownship" ColumnName="ParcelTownship" />
+          <ScalarProperty Name="ParcelRange" ColumnName="ParcelRange" />
+          <ScalarProperty Name="ParcelSubdivision" ColumnName="ParcelSubdivision" />
+          <ScalarProperty Name="ParcelDistrict" ColumnName="ParcelDistrict" />
+          <ScalarProperty Name="GIS_Subdivision_Name" ColumnName="GIS_Subdivision_Name" />
+          <ScalarProperty Name="GIS_Subdivision_No" ColumnName="GIS_Subdivision_No" />
+          <ScalarProperty Name="GIS_Subdivision_Plat" ColumnName="GIS_Subdivision_Plat" />
+          <ScalarProperty Name="GIS_Subdivision_Page" ColumnName="GIS_Subdivision_Page" />
+          <ScalarProperty Name="GIS_ParcelValue" ColumnName="GIS_ParcelValue" />
+          <ScalarProperty Name="LivingArea" ColumnName="LivingArea" />
+          <ScalarProperty Name="Commissioner_Name" ColumnName="Commissioner_Name" />
+          <ScalarProperty Name="Commissioner_District" ColumnName="Commissioner_District" />
+          <ScalarProperty Name="WaterMgtDistrict" ColumnName="WaterMgtDistrict" />
+          <ScalarProperty Name="NumBuildings" ColumnName="NumBuildings" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="LockUpdate" ColumnName="LockUpdate" />
+          <ScalarProperty Name="PropertyTypeCustomersName" ColumnName="PropertyTypeCustomersName" />
+          <ScalarProperty Name="OwnerOccOrRental" ColumnName="OwnerOccOrRental" />
+          <ScalarProperty Name="PremiseNumOLD" ColumnName="PremiseNumOLD" />
+          <ScalarProperty Name="BldgSizeGross" ColumnName="BldgSizeGross" />
+          <ScalarProperty Name="RevClassCode" ColumnName="RevClassCode" />
+          <ScalarProperty Name="EstimatedIrrArea" ColumnName="EstimatedIrrArea" />
+          <ScalarProperty Name="NumUnitsActual" ColumnName="NumUnitsActual" />
+          <ScalarProperty Name="NumOccupantsActual" ColumnName="NumOccupantsActual" />
+          <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+          <ScalarProperty Name="RecordationDate" ColumnName="RecordationDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="propertiesservices">
+      <EntityTypeMapping TypeName="waterconsModel.propertiesservice">
+        <MappingFragment StoreEntitySet="propertiesservices">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="propertyowners">
+      <EntityTypeMapping TypeName="waterconsModel.propertyowner">
+        <MappingFragment StoreEntitySet="propertyowners">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="IsCurrentOwner" ColumnName="IsCurrentOwner" />
+          <ScalarProperty Name="PercentOwnerShip" ColumnName="PercentOwnerShip" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="regions">
+      <EntityTypeMapping TypeName="waterconsModel.region">
+        <MappingFragment StoreEntitySet="regions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="savingsfactors">
+      <EntityTypeMapping TypeName="waterconsModel.savingsfactor">
+        <MappingFragment StoreEntitySet="savingsfactors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="EffLevelID" ColumnName="EffLevelID" />
+          <ScalarProperty Name="PropertyTypeID" ColumnName="PropertyTypeID" />
+          <ScalarProperty Name="PredSavingsFactor" ColumnName="PredSavingsFactor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="services">
+      <EntityTypeMapping TypeName="waterconsModel.service">
+        <MappingFragment StoreEntitySet="services">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="SvcNumber" ColumnName="SvcNumber" />
+          <ScalarProperty Name="PremiseNum" ColumnName="PremiseNum" />
+          <ScalarProperty Name="AcctNumber" ColumnName="AcctNumber" />
+          <ScalarProperty Name="AccountBase" ColumnName="AccountBase" />
+          <ScalarProperty Name="Block" ColumnName="Block" />
+          <ScalarProperty Name="Lot" ColumnName="Lot" />
+          <ScalarProperty Name="SvcType" ColumnName="SvcType" />
+          <ScalarProperty Name="SvcSize" ColumnName="SvcSize" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StreetNo" ColumnName="StreetNo" />
+          <ScalarProperty Name="StreetNoFrom" ColumnName="StreetNoFrom" />
+          <ScalarProperty Name="StreetNoTo" ColumnName="StreetNoTo" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetSuffix" ColumnName="StreetSuffix" />
+          <ScalarProperty Name="StreetDir" ColumnName="StreetDir" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="DateSvcInstall" ColumnName="DateSvcInstall" />
+          <ScalarProperty Name="DateSvcRenew" ColumnName="DateSvcRenew" />
+          <ScalarProperty Name="DateSvcEnd" ColumnName="DateSvcEnd" />
+          <ScalarProperty Name="SPResivoirCode" ColumnName="SPResivoirCode" />
+          <ScalarProperty Name="FlagMultiTap" ColumnName="FlagMultiTap" />
+          <ScalarProperty Name="FlagMultiMtr" ColumnName="FlagMultiMtr" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="DescWhatMtrServs" ColumnName="DescWhatMtrServs" />
+          <ScalarProperty Name="StructureDesc" ColumnName="StructureDesc" />
+          <ScalarProperty Name="MainDirection" ColumnName="MainDirection" />
+          <ScalarProperty Name="TapDirection" ColumnName="TapDirection" />
+          <ScalarProperty Name="MtrDirection" ColumnName="MtrDirection" />
+          <ScalarProperty Name="MainNumFeet" ColumnName="MainNumFeet" />
+          <ScalarProperty Name="MainAddrDir1" ColumnName="MainAddrDir1" />
+          <ScalarProperty Name="MainAddrDir2" ColumnName="MainAddrDir2" />
+          <ScalarProperty Name="MainAddrBase" ColumnName="MainAddrBase" />
+          <ScalarProperty Name="MainAddrStreet" ColumnName="MainAddrStreet" />
+          <ScalarProperty Name="MainAddrSffx" ColumnName="MainAddrSffx" />
+          <ScalarProperty Name="TapNumFeet" ColumnName="TapNumFeet" />
+          <ScalarProperty Name="TapAddrDir1" ColumnName="TapAddrDir1" />
+          <ScalarProperty Name="TapAddrDir2" ColumnName="TapAddrDir2" />
+          <ScalarProperty Name="TapAddrBase" ColumnName="TapAddrBase" />
+          <ScalarProperty Name="TapAddrStreet" ColumnName="TapAddrStreet" />
+          <ScalarProperty Name="TapAddrSffx" ColumnName="TapAddrSffx" />
+          <ScalarProperty Name="TapType" ColumnName="TapType" />
+          <ScalarProperty Name="TapBlock" ColumnName="TapBlock" />
+          <ScalarProperty Name="TapNumber" ColumnName="TapNumber" />
+          <ScalarProperty Name="MtrConnectionNum" ColumnName="MtrConnectionNum" />
+          <ScalarProperty Name="MtrNumber" ColumnName="MtrNumber" />
+          <ScalarProperty Name="MtrType" ColumnName="MtrType" />
+          <ScalarProperty Name="MtrSize" ColumnName="MtrSize" />
+          <ScalarProperty Name="MtrMake" ColumnName="MtrMake" />
+          <ScalarProperty Name="MtrConnectionLocn" ColumnName="MtrConnectionLocn" />
+          <ScalarProperty Name="MtrReaderComments" ColumnName="MtrReaderComments" />
+          <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+          <ScalarProperty Name="Route" ColumnName="Route" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="PremiseNumOLD" ColumnName="PremiseNumOLD" />
+          <ScalarProperty Name="LockUpdate" ColumnName="LockUpdate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicetypes">
+      <EntityTypeMapping TypeName="waterconsModel.servicetype">
+        <MappingFragment StoreEntitySet="servicetypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SvcTypeCode" ColumnName="SvcTypeCode" />
+          <ScalarProperty Name="SvcTypeName" ColumnName="SvcTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supporttickets">
+      <EntityTypeMapping TypeName="waterconsModel.supportticket">
+        <MappingFragment StoreEntitySet="supporttickets">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="TicketDate" ColumnName="TicketDate" />
+          <ScalarProperty Name="RequesterID" ColumnName="RequesterID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ResolvedID" ColumnName="ResolvedID" />
+          <ScalarProperty Name="ResolveDate" ColumnName="ResolveDate" />
+          <ScalarProperty Name="ResolverComments" ColumnName="ResolverComments" />
+          <ScalarProperty Name="TicketStatus" ColumnName="TicketStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="surveyareas">
+      <EntityTypeMapping TypeName="waterconsModel.surveyarea">
+        <MappingFragment StoreEntitySet="surveyareas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="SurveyCaseID" ColumnName="SurveyCaseID" />
+          <ScalarProperty Name="InterventionID" ColumnName="InterventionID" />
+          <ScalarProperty Name="AreaType" ColumnName="AreaType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ToiletDeviceID" ColumnName="ToiletDeviceID" />
+          <ScalarProperty Name="FaucetDeviceID" ColumnName="FaucetDeviceID" />
+          <ScalarProperty Name="ShowerHeadDeviceID" ColumnName="ShowerHeadDeviceID" />
+          <ScalarProperty Name="DishWasherID" ColumnName="DishWasherID" />
+          <ScalarProperty Name="ClothesWasherID" ColumnName="ClothesWasherID" />
+          <ScalarProperty Name="AreaSize" ColumnName="AreaSize" />
+          <ScalarProperty Name="WaterApplicationRate" ColumnName="WaterApplicationRate" />
+          <ScalarProperty Name="PercentIrrigated" ColumnName="PercentIrrigated" />
+          <ScalarProperty Name="IrrigationCircuit1" ColumnName="IrrigationCircuit1" />
+          <ScalarProperty Name="IrrigationCircuit2" ColumnName="IrrigationCircuit2" />
+          <ScalarProperty Name="IrrigationCircuit3" ColumnName="IrrigationCircuit3" />
+          <ScalarProperty Name="IrrigationCircuit4" ColumnName="IrrigationCircuit4" />
+          <ScalarProperty Name="IrrigationCircuit5" ColumnName="IrrigationCircuit5" />
+          <ScalarProperty Name="IrrigationCircuit6" ColumnName="IrrigationCircuit6" />
+          <ScalarProperty Name="IrrigationCircuit7" ColumnName="IrrigationCircuit7" />
+          <ScalarProperty Name="IrrigationCircuit8" ColumnName="IrrigationCircuit8" />
+          <ScalarProperty Name="IrrigationCircuit9" ColumnName="IrrigationCircuit9" />
+          <ScalarProperty Name="IrrigationCircuit10" ColumnName="IrrigationCircuit10" />
+          <ScalarProperty Name="IrrigationCircuit11" ColumnName="IrrigationCircuit11" />
+          <ScalarProperty Name="IrrigationCircuit12" ColumnName="IrrigationCircuit12" />
+          <ScalarProperty Name="PlantType1" ColumnName="PlantType1" />
+          <ScalarProperty Name="PlantType2" ColumnName="PlantType2" />
+          <ScalarProperty Name="PlantType3" ColumnName="PlantType3" />
+          <ScalarProperty Name="PlantType1Percent" ColumnName="PlantType1Percent" />
+          <ScalarProperty Name="PlantType3Percent" ColumnName="PlantType3Percent" />
+          <ScalarProperty Name="PlantType2Percent" ColumnName="PlantType2Percent" />
+          <ScalarProperty Name="SoilType" ColumnName="SoilType" />
+          <ScalarProperty Name="Slope" ColumnName="Slope" />
+          <ScalarProperty Name="SunExposure" ColumnName="SunExposure" />
+          <ScalarProperty Name="PotentialSavings" ColumnName="PotentialSavings" />
+          <ScalarProperty Name="FlowRate" ColumnName="FlowRate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="surveycases">
+      <EntityTypeMapping TypeName="waterconsModel.surveycas">
+        <MappingFragment StoreEntitySet="surveycases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="InterventionID" ColumnName="InterventionID" />
+          <ScalarProperty Name="SurveyTypeID" ColumnName="SurveyTypeID" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="NumberOfOcupants" ColumnName="NumberOfOcupants" />
+          <ScalarProperty Name="NumberOfSimilarUnits" ColumnName="NumberOfSimilarUnits" />
+          <ScalarProperty Name="PassFail" ColumnName="PassFail" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="systemtypes">
+      <EntityTypeMapping TypeName="waterconsModel.systemtype">
+        <MappingFragment StoreEntitySet="systemtypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="FieldOrder" ColumnName="FieldOrder" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketattachments">
+      <EntityTypeMapping TypeName="waterconsModel.ticketattachment">
+        <MappingFragment StoreEntitySet="ticketattachments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SupportTicketID" ColumnName="SupportTicketID" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="waterconsModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="DefaultPage" ColumnName="DefaultPage" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateLastLogin" ColumnName="DateLastLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="violationcases">
+      <EntityTypeMapping TypeName="waterconsModel.violationcas">
+        <MappingFragment StoreEntitySet="violationcases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="CitationNumber" ColumnName="CitationNumber" />
+          <ScalarProperty Name="FineAmount" ColumnName="FineAmount" />
+          <ScalarProperty Name="ViolationDateTime" ColumnName="ViolationDateTime" />
+          <ScalarProperty Name="ViolationDateTime2" ColumnName="ViolationDateTime2" />
+          <ScalarProperty Name="ComplianceDate" ColumnName="ComplianceDate" />
+          <ScalarProperty Name="ViolationDescription" ColumnName="ViolationDescription" />
+          <ScalarProperty Name="AdditionalDescription" ColumnName="AdditionalDescription" />
+          <ScalarProperty Name="CorrectiveAction" ColumnName="CorrectiveAction" />
+          <ScalarProperty Name="AdditionalAction" ColumnName="AdditionalAction" />
+          <ScalarProperty Name="PhotoEvidence1" ColumnName="PhotoEvidence1" />
+          <ScalarProperty Name="PhotoEvidence2" ColumnName="PhotoEvidence2" />
+          <ScalarProperty Name="SourceSprinkler" ColumnName="SourceSprinkler" />
+          <ScalarProperty Name="SourceHose" ColumnName="SourceHose" />
+          <ScalarProperty Name="SourceHoseSprinkler" ColumnName="SourceHoseSprinkler" />
+          <ScalarProperty Name="SourceCurb" ColumnName="SourceCurb" />
+          <ScalarProperty Name="SourcePipe" ColumnName="SourcePipe" />
+          <ScalarProperty Name="SourceUnknown" ColumnName="SourceUnknown" />
+          <ScalarProperty Name="SourceAfterHours" ColumnName="SourceAfterHours" />
+          <ScalarProperty Name="Runoff" ColumnName="Runoff" />
+          <ScalarProperty Name="GoingToStreet" ColumnName="GoingToStreet" />
+          <ScalarProperty Name="GoingToDriveway" ColumnName="GoingToDriveway" />
+          <ScalarProperty Name="GoingToSideWalk" ColumnName="GoingToSideWalk" />
+          <ScalarProperty Name="GoingToGutter" ColumnName="GoingToGutter" />
+          <ScalarProperty Name="GoingToAlley" ColumnName="GoingToAlley" />
+          <ScalarProperty Name="GoingToOther" ColumnName="GoingToOther" />
+          <ScalarProperty Name="ViolatorGender" ColumnName="ViolatorGender" />
+          <ScalarProperty Name="ViolatorType" ColumnName="ViolatorType" />
+          <ScalarProperty Name="InCity" ColumnName="InCity" />
+          <ScalarProperty Name="InspectorID" ColumnName="InspectorID" />
+          <ScalarProperty Name="ContactPersonID" ColumnName="ContactPersonID" />
+          <ScalarProperty Name="ViolationCodeID" ColumnName="ViolationCodeID" />
+          <ScalarProperty Name="SourceOfWater" ColumnName="SourceOfWater" />
+          <ScalarProperty Name="Observer" ColumnName="Observer" />
+          <ScalarProperty Name="DatePlannedCuttoff" ColumnName="DatePlannedCuttoff" />
+          <ScalarProperty Name="DateActualCuttoff" ColumnName="DateActualCuttoff" />
+          <ScalarProperty Name="DaysToWater" ColumnName="DaysToWater" />
+          <ScalarProperty Name="TimesToWater" ColumnName="TimesToWater" />
+          <ScalarProperty Name="CustomerViolationNumber" ColumnName="CustomerViolationNumber" />
+          <ScalarProperty Name="NotAViolation" ColumnName="NotAViolation" />
+          <ScalarProperty Name="NotAViolationReason" ColumnName="NotAViolationReason" />
+          <ScalarProperty Name="NotAViolationOtherReason" ColumnName="NotAViolationOtherReason" />
+          <ScalarProperty Name="PhotoEvidence1Patroller" ColumnName="PhotoEvidence1Patroller" />
+          <ScalarProperty Name="PhotoEvidence2Patroller" ColumnName="PhotoEvidence2Patroller" />
+          <ScalarProperty Name="InitialContactPatroller" ColumnName="InitialContactPatroller" />
+          <ScalarProperty Name="InitialContactDateTime" ColumnName="InitialContactDateTime" />
+          <ScalarProperty Name="InitialContactComments" ColumnName="InitialContactComments" />
+          <ScalarProperty Name="FollowupContactPatroller" ColumnName="FollowupContactPatroller" />
+          <ScalarProperty Name="FollowupContactDateTime" ColumnName="FollowupContactDateTime" />
+          <ScalarProperty Name="FollowupContactComments" ColumnName="FollowupContactComments" />
+          <ScalarProperty Name="ReportSource" ColumnName="ReportSource" />
+          <ScalarProperty Name="LargeUser" ColumnName="LargeUser" />
+          <ScalarProperty Name="LetterNumber" ColumnName="LetterNumber" />
+          <ScalarProperty Name="cbkShutoff" ColumnName="cbkShutoff" />
+          <ScalarProperty Name="DateShutoff" ColumnName="DateShutoff" />
+          <ScalarProperty Name="cbkFlowRestrictor" ColumnName="cbkFlowRestrictor" />
+          <ScalarProperty Name="DateFlowRestrictor" ColumnName="DateFlowRestrictor" />
+          <ScalarProperty Name="ViolationDateTimeNew" ColumnName="ViolationDateTimeNew" />
+          <ScalarProperty Name="OtherViolationType" ColumnName="OtherViolationType" />
+          <ScalarProperty Name="ViolationNumber" ColumnName="ViolationNumber" />
+          <ScalarProperty Name="WhatObserved" ColumnName="WhatObserved" />
+          <ScalarProperty Name="DateMailed" ColumnName="DateMailed" />
+          <ScalarProperty Name="ViolationSent" ColumnName="ViolationSent" />
+          <ScalarProperty Name="NumPropertyViolation" ColumnName="NumPropertyViolation" />
+          <ScalarProperty Name="RemovedDate" ColumnName="RemovedDate" />
+          <ScalarProperty Name="RestoredDate" ColumnName="RestoredDate" />
+          <ScalarProperty Name="RestorePaidDate" ColumnName="RestorePaidDate" />
+          <ScalarProperty Name="DateComplianceDue" ColumnName="DateComplianceDue" />
+          <ScalarProperty Name="VTNNumber" ColumnName="VTNNumber" />
+          <ScalarProperty Name="IsSentToSpecialMagistrate" ColumnName="IsSentToSpecialMagistrate" />
+          <ScalarProperty Name="SentToSpecialMagistrateDate" ColumnName="SentToSpecialMagistrateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="violationcodes">
+      <EntityTypeMapping TypeName="waterconsModel.violationcode">
+        <MappingFragment StoreEntitySet="violationcodes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CorrectiveAction" ColumnName="CorrectiveAction" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="waterrates">
+      <EntityTypeMapping TypeName="waterconsModel.waterrate">
+        <MappingFragment StoreEntitySet="waterrates">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="PropType" ColumnName="PropType" />
+          <ScalarProperty Name="SICCode" ColumnName="SICCode" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="BottomLimit" ColumnName="BottomLimit" />
+          <ScalarProperty Name="TopLimit" ColumnName="TopLimit" />
+          <ScalarProperty Name="LevelRate" ColumnName="LevelRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paymenthistories">
+      <EntityTypeMapping TypeName="waterconsModel.paymenthistory">
+        <MappingFragment StoreEntitySet="paymenthistory">
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Response" ColumnName="Response" />
+          <ScalarProperty Name="ResponseCode" ColumnName="ResponseCode" />
+          <ScalarProperty Name="PaymentSuccess" ColumnName="PaymentSuccess" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IsDebitCard" ColumnName="IsDebitCard" />
+          <ScalarProperty Name="IsAutoPayment" ColumnName="IsAutoPayment" />
+          <ScalarProperty Name="SecurityCode" ColumnName="SecurityCode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="HoldingNumber" ColumnName="HoldingNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetNo" ColumnName="StreetNo" />
+          <ScalarProperty Name="CardHolderName" ColumnName="CardHolderName" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="activitylogs">
+      <EntityTypeMapping TypeName="waterconsModel.activitylog">
+        <MappingFragment StoreEntitySet="activitylog">
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Module" ColumnName="Module" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="packages">
+      <EntityTypeMapping TypeName="waterconsModel.package">
+        <MappingFragment StoreEntitySet="packages">
+          <ScalarProperty Name="DataMigration" ColumnName="DataMigration" />
+          <ScalarProperty Name="OnsiteSupport" ColumnName="OnsiteSupport" />
+          <ScalarProperty Name="PhoneSupport" ColumnName="PhoneSupport" />
+          <ScalarProperty Name="EmailSupport" ColumnName="EmailSupport" />
+          <ScalarProperty Name="AllowUrl" ColumnName="AllowUrl" />
+          <ScalarProperty Name="AccountLimit" ColumnName="AccountLimit" />
+          <ScalarProperty Name="PropertiesLimit" ColumnName="PropertiesLimit" />
+          <ScalarProperty Name="UserLimit" ColumnName="UserLimit" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

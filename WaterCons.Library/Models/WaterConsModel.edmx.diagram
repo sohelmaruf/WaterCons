@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8026bb064a3e4517889bcba18c90dc79" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="waterconsModel.account" Width="1.5" PointX="5.25" PointY="111.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.advertisementcas" Width="1.5" PointX="20.75" PointY="110.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.applicationmenu" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.campaigncas" Width="1.5" PointX="20.75" PointY="119.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.campaignmaterial" Width="1.5" PointX="23" PointY="123.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.casecontact" Width="1.5" PointX="23.75" PointY="117.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.case" Width="1.5" PointX="18.5" PointY="104.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.city" Width="1.5" PointX="3" PointY="78" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.clientgridfield" Width="1.5" PointX="3" PointY="80.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.client" Width="1.5" PointX="0.75" PointY="100.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.consumption" Width="1.5" PointX="5.25" PointY="131.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.contact" Width="1.5" PointX="8.75" PointY="95.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.deviceefficiencylevel" Width="1.5" PointX="5.25" PointY="103.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.devicemodel" Width="1.5" PointX="8.25" PointY="100.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.device" Width="1.5" PointX="15.5" PointY="100" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.devicetype" Width="1.5" PointX="3" PointY="99.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.documentation" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.documentcontent" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.documentupload" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.educationalmaterial" Width="1.5" PointX="29" PointY="116.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.educationalvisitattendee" Width="1.5" PointX="26" PointY="121.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.educationalvisitcas" Width="1.5" PointX="23.75" PointY="108" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.event" Width="1.5" PointX="26.75" PointY="112.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.generalsetting" Width="1.5" PointX="3" PointY="104.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.gridfield" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.intervention" Width="1.5" PointX="26.75" PointY="103.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.irrigationalcas" Width="1.5" PointX="20.75" PointY="103.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.listitem" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.meterread" Width="1.5" PointX="8.25" PointY="130.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.newslettercontact" Width="1.5" PointX="11" PointY="96.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.newsletter" Width="1.5" PointX="8.75" PointY="91" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.organization" Width="1.5" PointX="3" PointY="111.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.person" Width="1.5" PointX="3" PointY="118.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.peoplepeopletype" Width="1.5" PointX="5.25" PointY="123.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.peopletype" Width="1.5" PointX="3" PointY="131.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.phase" Width="1.5" PointX="11.25" PointY="119" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.programdevicemodel" Width="1.5" PointX="13.5" PointY="120.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.programdevicetype" Width="1.5" PointX="5.25" PointY="119.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.programinterventiontype" Width="1.5" PointX="5.25" PointY="138" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.program" Width="1.5" PointX="3" PointY="136" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.programstep" Width="1.5" PointX="11.25" PointY="124" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.property" Width="1.5" PointX="8.25" PointY="108.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.propertiesservice" Width="1.5" PointX="10.5" PointY="135.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.propertyowner" Width="1.5" PointX="10.5" PointY="115.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.region" Width="1.5" PointX="3" PointY="142.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.savingsfactor" Width="1.5" PointX="5.25" PointY="99.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.service" Width="1.5" PointX="3" PointY="150.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.servicetype" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.supportticket" Width="1.5" PointX="11" PointY="103.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.surveyarea" Width="1.5" PointX="32" PointY="104.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.surveycas" Width="1.5" PointX="29" PointY="111.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.systemtype" Width="1.5" PointX="3" PointY="94.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.ticketattachment" Width="1.5" PointX="13.25" PointY="104.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.user" Width="1.5" PointX="3" PointY="165.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.violationcas" Width="1.5" PointX="20.75" PointY="128.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.violationcode" Width="1.5" PointX="3" PointY="169.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="waterconsModel.waterrate" Width="1.5" PointX="3" PointY="173.5" IsExpanded="true" />
+        <AssociationConnector Association="waterconsModel.accounts_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.accounts_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.accounts_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_8" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.advertisementcases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.advertisementcases_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.campaigncases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.campaignmaterials_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.campaignmaterials_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.casecontacts_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.casecontacts_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cases_ibfk_7" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalvisitcases_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.events_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.interventions_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.irrigationalcases_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveycases_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.violationcases_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.cities_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.clientgridfields_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.consumptions_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.deviceefficiencylevels_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.devicemodels_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.devices_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.devicetypes_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalmaterials_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalvisitcases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.events_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.generalsettings_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.interventions_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.irrigationalcases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.meterreads_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.organizations_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.people_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.phases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programs_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programsteps_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.properties_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.regions_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.savingsfactors_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.services_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.supporttickets_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveycases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.users_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.violationcases_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.violationcodes_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.waterrates_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.consumptions_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.newslettercontacts_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.supporttickets_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.deviceefficiencylevels_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.devicemodels_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.devices_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programdevicemodels_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.interventions_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.interventions_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_7" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_8" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programdevicetypes_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.savingsfactors_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.documentations_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.documentcontents_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.documentuploads_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalmaterials_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalmaterials_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalmaterials_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalvisitattendees_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalvisitcases_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.educationalvisitcases_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.events_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.events_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.events_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.events_ibfk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.interventions_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveyareas_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveycases_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.irrigationalcases_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.meterreads_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.newslettercontacts_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.peoplepeopletype_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.properties_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.propertyowners_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.violationcases_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.violationcases_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.peoplepeopletype_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.phases_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programdevicemodels_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programdevicetypes_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programinterventiontypes_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programinterventiontypes_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programsteps_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programsteps_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.programsteps_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.propertiesservices_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.propertyowners_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.propertiesservices_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.savingsfactors_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.ticketattachments_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.surveycases_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="waterconsModel.violationcases_ibfk_5" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="waterconsModel.paymenthistory" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="waterconsModel.activitylog" Width="1.5" PointX="8.25" PointY="135" />
+        <EntityTypeShape EntityType="waterconsModel.package" Width="1.5" PointX="0.75" PointY="95.375" />
+        <AssociationConnector Association="waterconsModel.activitylog_ibfk_1" />
+        <AssociationConnector Association="waterconsModel.activitylog_ibfk_2" />
+        <AssociationConnector Association="waterconsModel.clients_ibfk_1" />
+        <AssociationConnector Association="waterconsModel.paymenthistory_ibfk_1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

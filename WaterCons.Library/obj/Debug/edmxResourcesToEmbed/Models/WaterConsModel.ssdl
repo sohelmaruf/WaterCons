@@ -1,0 +1,3260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="waterconsModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="accounts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="AccountType" Type="char" MaxLength="10" />
+    <Property Name="PropertyID" Type="int" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="255" />
+    <Property Name="AccountHolderID" Type="int" />
+    <Property Name="AccountHolderOrg" Type="int" />
+    <Property Name="SICCode" Type="varchar" MaxLength="10" />
+    <Property Name="NAICSCode" Type="varchar" MaxLength="10" />
+    <Property Name="RevenueClass" Type="varchar" MaxLength="255" />
+    <Property Name="OpenedDate" Type="datetime" Precision="0" />
+    <Property Name="ClosedDate" Type="datetime" Precision="0" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+    <Property Name="HasLien" Type="bool" />
+    <Property Name="Affadavit" Type="bool" />
+    <Property Name="PayNoPay" Type="bool" />
+    <Property Name="Comments" Type="varchar" MaxLength="255" />
+    <Property Name="LockUpdate" Type="bool" />
+    <Property Name="CreateFlag" Type="varchar" MaxLength="50" />
+    <Property Name="OldAccountNumber" Type="varchar" MaxLength="255" />
+    <Property Name="CAP" Type="bool" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="FlowFactor" Type="float" />
+    <Property Name="LowIncome" Type="bool" />
+    <Property Name="ImportDate" Type="datetime" Precision="0" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="activitylog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="Module" Type="varchar" MaxLength="50" />
+    <Property Name="View" Type="varchar" MaxLength="50" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Exception" Type="varchar" MaxLength="500" />
+    <Property Name="LogTime" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="advertisementcases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CaseID" Type="int" />
+    <Property Name="AdStartDate" Type="datetime" Precision="0" />
+    <Property Name="AdEndDate" Type="datetime" Precision="0" />
+    <Property Name="AdType" Type="varchar" MaxLength="10" />
+    <Property Name="PlacedBy" Type="int" />
+    <Property Name="PublicationName" Type="varchar" MaxLength="50" />
+    <Property Name="PublicationCirculation" Type="int" />
+    <Property Name="ProgramName" Type="varchar" MaxLength="50" />
+    <Property Name="CostIndiviualRate" Type="float" />
+    <Property Name="CostGroupRate" Type="float" />
+    <Property Name="TopicOfFocus" Type="varchar" MaxLength="50" />
+    <Property Name="GeographicTargetedAreas" Type="varchar" MaxLength="50" />
+    <Property Name="TargetAudience" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="applicationmenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Route" Type="varchar" MaxLength="200" />
+    <Property Name="Module" Type="varchar" MaxLength="50" />
+    <Property Name="MenuOrder" Type="int" Nullable="false" />
+    <Property Name="RequiresAuthenication" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="campaigncases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CaseID" Type="int" />
+    <Property Name="AdStartDate" Type="datetime" Precision="0" />
+    <Property Name="AdEndDate" Type="datetime" Precision="0" />
+    <Property Name="AdType" Type="varchar" MaxLength="50" />
+    <Property Name="PlacedBy" Type="varchar" MaxLength="50" />
+    <Property Name="PublicationName" Type="varchar" MaxLength="500" />
+    <Property Name="PublicationCirculation" Type="int" />
+    <Property Name="ProgramName" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="CostIndiviualRate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CostGroupRate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TopicOfFocus" Type="varchar" MaxLength="50" />
+    <Property Name="GeographicTargetedAreas" Type="varchar" MaxLength="200" />
+    <Property Name="TargetAudience" Type="varchar" MaxLength="500" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="campaignmaterials">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CAMCaseID" Type="int" />
+    <Property Name="AttendeeID" Type="int" />
+    <Property Name="Fixturename" Type="varchar" MaxLength="100" />
+    <Property Name="Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="casecontacts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CaseID" Type="int" />
+    <Property Name="PeopleID" Type="int" />
+  </EntityType>
+  <EntityType Name="cases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="PhaseID" Type="int" Nullable="false" />
+    <Property Name="ApplicantID" Type="int" />
+    <Property Name="OwnerID" Type="int" />
+    <Property Name="OwnerOrgID" Type="int" />
+    <Property Name="PropertyID" Type="int" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="InspectorID" Type="int" />
+    <Property Name="OriginalCaseNumber" Type="varchar" MaxLength="25" />
+    <Property Name="ApplicationNumber" Type="varchar" MaxLength="30" />
+    <Property Name="OwnOrRent" Type="varchar" MaxLength="5" />
+    <Property Name="AwareOfProgram" Type="bool" />
+    <Property Name="WaterUsage" Type="int" />
+    <Property Name="StepID" Type="int" />
+    <Property Name="StepDate" Type="datetime" Precision="0" />
+    <Property Name="StepDateNext" Type="datetime" Precision="0" />
+    <Property Name="FundingType" Type="varchar" MaxLength="2" />
+    <Property Name="StartDate" Type="datetime" Precision="0" />
+    <Property Name="EndDate" Type="datetime" Precision="0" />
+    <Property Name="Referral" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptsAttached" Type="bool" />
+    <Property Name="BillsAttached" Type="bool" />
+    <Property Name="ApplicationProvided" Type="bool" />
+    <Property Name="ApplicationRequired" Type="bool" />
+    <Property Name="ApplicationReturnedReason" Type="varchar" MaxLength="500" />
+    <Property Name="RejectionReason" Type="varchar" MaxLength="500" />
+    <Property Name="PotentialReturn" Type="bool" />
+    <Property Name="ReturnDate" Type="datetime" Precision="0" />
+    <Property Name="WalkAway" Type="bool" />
+    <Property Name="WalkAwayReason" Type="varchar" MaxLength="200" />
+    <Property Name="OtherProgramInterest" Type="bool" />
+    <Property Name="FurtherAssistanceNeeded" Type="bool" />
+    <Property Name="Comments" Type="varchar" MaxLength="2500" />
+    <Property Name="Recommendations" Type="varchar" MaxLength="2500" />
+    <Property Name="CaseNumber" Type="varchar" MaxLength="25" />
+    <Property Name="SSNOrID" Type="varchar" MaxLength="25" />
+    <Property Name="CreditCard" Type="varchar" MaxLength="25" />
+    <Property Name="RebateCheckSSNOrID" Type="bool" />
+    <Property Name="RebateCheckBill" Type="bool" />
+    <Property Name="RebateCheckReceipt" Type="bool" />
+    <Property Name="InspectionRequired" Type="bool" />
+    <Property Name="Inspected" Type="bool" />
+    <Property Name="InspectionPassFail" Type="char" MaxLength="1" />
+    <Property Name="InspectionDate" Type="datetime" Precision="0" />
+    <Property Name="CertificationDate" Type="datetime" Precision="0" />
+    <Property Name="Verified" Type="bool" />
+    <Property Name="VerificationMethod" Type="char" MaxLength="2" />
+    <Property Name="VerificationDate" Type="datetime" Precision="0" />
+    <Property Name="OtherInspectorName" Type="varchar" MaxLength="50" />
+    <Property Name="Document" Type="varchar" MaxLength="100" />
+    <Property Name="SurveySent" Type="bool" />
+    <Property Name="SurveyCompleted" Type="bool" />
+    <Property Name="OTUWNum" Type="varchar" MaxLength="50" />
+    <Property Name="BatchID" Type="varchar" MaxLength="50" />
+    <Property Name="ROCCertified" Type="bool" />
+    <Property Name="ROCCertifiedDate" Type="datetime" Precision="0" />
+    <Property Name="DocDate" Type="datetime" Precision="0" />
+    <Property Name="DocNum" Type="int" />
+    <Property Name="YearBuilt" Type="int" />
+    <Property Name="BathTot" Type="int" />
+    <Property Name="RCCase" Type="bool" />
+    <Property Name="RCStatus" Type="varchar" MaxLength="50" />
+    <Property Name="AssignedProjectID" Type="int" />
+    <Property Name="RCTotalWaterSavings" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Responsible" Type="varchar" MaxLength="50" />
+    <Property Name="WDOGreenCreditMultiplier" Type="varchar" MaxLength="50" />
+    <Property Name="WDOTotalOffsetRequired" Type="varchar" MaxLength="15" />
+    <Property Name="RejectReasons" Type="varchar" MaxLength="1000" />
+    <Property Name="CreditAssigned" Type="bool" />
+    <Property Name="EscrowNumber" Type="varchar" MaxLength="50" />
+    <Property Name="UnitNumber" Type="varchar" MaxLength="100" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="Photo1" Type="varchar" MaxLength="255" />
+    <Property Name="Photo2" Type="varchar" MaxLength="255" />
+    <Property Name="Photo3" Type="varchar" MaxLength="255" />
+    <Property Name="Photo4" Type="varchar" MaxLength="255" />
+    <Property Name="Photo5" Type="varchar" MaxLength="255" />
+    <Property Name="Photo6" Type="varchar" MaxLength="255" />
+    <Property Name="Photo7" Type="varchar" MaxLength="255" />
+    <Property Name="Photo8" Type="varchar" MaxLength="255" />
+    <Property Name="RUSInspector" Type="varchar" MaxLength="100" />
+    <Property Name="RUSEscrowAgent" Type="varchar" MaxLength="100" />
+    <Property Name="RUSRealtor" Type="varchar" MaxLength="100" />
+    <Property Name="RUSOther" Type="varchar" MaxLength="100" />
+    <Property Name="CAPType" Type="varchar" MaxLength="50" />
+    <Property Name="HowDidYouHear" Type="varchar" MaxLength="100" />
+    <Property Name="ReasonforParticipation" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CityCode" Type="char" MaxLength="2" />
+    <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clientgridfields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="100" />
+    <Property Name="CodeText" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Caption" Type="varchar" MaxLength="100" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="FieldOrder" Type="int" />
+    <Property Name="IsVisible" Type="bool" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Width" Type="int" />
+    <Property Name="WordWrap" Type="bool" />
+  </EntityType>
+  <EntityType Name="clients">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="100" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="30" />
+    <Property Name="Logo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="TermsAccepted" Type="bool" />
+    <Property Name="Comments" Type="varchar" MaxLength="200" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="PackageID" Type="int" />
+    <Property Name="AllowAutoPay" Type="bool" />
+    <Property Name="AutoPaySchedule" Type="varchar" MaxLength="50" />
+    <Property Name="NextAutoPayDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="consumptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="ServiceID" Type="int" />
+    <Property Name="ConsumptionDate" Type="datetime" Precision="0" />
+    <Property Name="Consumption" Type="bigint" />
+  </EntityType>
+  <EntityType Name="contacts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="50" />
+    <Property Name="OfficePhone" Type="varchar" MaxLength="50" />
+    <Property Name="Street" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Zipcode" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Organization" Type="varchar" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="AllowNewsLetter" Type="bool" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Responded" Type="bool" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="deviceefficiencylevels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="DeviceTypeID" Type="int" />
+    <Property Name="EffLevelName" Type="varchar" MaxLength="50" />
+    <Property Name="EffLevelType" Type="varchar" MaxLength="50" />
+    <Property Name="EffLevelValue" Type="float" />
+    <Property Name="Comments" Type="varchar" MaxLength="500" />
+    <Property Name="SortOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="devicemodels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="DeviceModelNumber" Type="varchar" MaxLength="200" />
+    <Property Name="DeviceTypeID" Type="int" Nullable="false" />
+    <Property Name="EffLevelID" Type="int" />
+    <Property Name="Make" Type="varchar" MaxLength="100" />
+    <Property Name="Model" Type="varchar" MaxLength="100" />
+    <Property Name="Version" Type="text" />
+    <Property Name="IsNewDefault" Type="bool" />
+    <Property Name="Size" Type="varchar" MaxLength="50" />
+    <Property Name="FlowRate" Type="varchar" MaxLength="50" />
+    <Property Name="ToiletGPF" Type="float" />
+    <Property Name="ToiletAdaCompliant" Type="bool" />
+    <Property Name="ToiletUlfCompliant" Type="bool" />
+    <Property Name="ToiletFlushType" Type="varchar" MaxLength="50" />
+    <Property Name="CwMEF" Type="float" />
+    <Property Name="CwWF" Type="float" />
+    <Property Name="XRayFilProType" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar" MaxLength="3000" />
+    <Property Name="ShowInSurvey" Type="bool" />
+    <Property Name="MostEfficient" Type="int" />
+    <Property Name="ShowerHeadType" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="devices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="DeviceModelID" Type="int" />
+    <Property Name="Manufacturer" Type="varchar" MaxLength="50" />
+    <Property Name="ModelName" Type="varchar" MaxLength="50" />
+    <Property Name="ModelYear" Type="int" />
+    <Property Name="CanRetrofit" Type="bool" />
+    <Property Name="SerialNumber" Type="varchar" MaxLength="50" />
+    <Property Name="OperationalUse" Type="varchar" MaxLength="100" />
+    <Property Name="EasilyAccessed" Type="bool" />
+    <Property Name="Location" Type="varchar" MaxLength="300" />
+    <Property Name="PurchaseDate" Type="datetime" Precision="0" />
+    <Property Name="PurchaseStore" Type="int" />
+    <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="StoreNumber" Type="varchar" MaxLength="100" />
+    <Property Name="VoucherNumber" Type="varchar" MaxLength="255" />
+    <Property Name="VoucherAmount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VoucherRedeemDate" Type="datetime" Precision="0" />
+    <Property Name="VoucherExpireDate" Type="datetime" Precision="0" />
+    <Property Name="IsLeaking" Type="bool" />
+    <Property Name="HoursUseDay" Type="float" />
+    <Property Name="ControllerStationsTotal" Type="int" />
+    <Property Name="ControllerStationsInUse" Type="int" />
+    <Property Name="PressureRegulatorPsi" Type="varchar" MaxLength="10" />
+    <Property Name="Gpm" Type="float" />
+    <Property Name="Gpf" Type="float" />
+    <Property Name="WF" Type="float" />
+    <Property Name="HasAerator" Type="bool" />
+    <Property Name="Leaks" Type="bool" />
+    <Property Name="Drips" Type="bool" />
+    <Property Name="LowFlow" Type="bool" />
+    <Property Name="LeakingAtFlapper" Type="bool" />
+    <Property Name="FillValveFaulty" Type="bool" />
+    <Property Name="PassFail" Type="char" MaxLength="1" />
+    <Property Name="ImportID" Type="int" />
+    <Property Name="ImportIDs" Type="int" />
+    <Property Name="ImportDate" Type="datetime" Precision="0" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="devicetypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NamePlural" Type="varchar" MaxLength="100" />
+    <Property Name="Type" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="DefaultSavingsFactor" Type="bigint" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="documentations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="documentcontents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentID" Type="int" />
+    <Property Name="Content" Type="varchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="documentuploads">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentID" Type="int" />
+    <Property Name="Caption" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Image" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="educationalmaterials">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="EduCaseID" Type="int" />
+    <Property Name="DistributionDate" Type="datetime" Precision="0" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="LocationType" Type="varchar" MaxLength="50" />
+    <Property Name="PreparedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPersonID" Type="int" />
+    <Property Name="GeographicArea" Type="varchar" MaxLength="50" />
+    <Property Name="MaterialSent1" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity1" Type="int" />
+    <Property Name="MaterialSent2" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity2" Type="int" />
+    <Property Name="MaterialSent3" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity3" Type="int" />
+    <Property Name="MaterialSent4" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity4" Type="int" />
+    <Property Name="MaterialSent5" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity5" Type="int" />
+    <Property Name="MaterialSent6" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity6" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="educationalvisitattendees">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EduCaseID" Type="int" />
+    <Property Name="AttendeeName" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="NoOfResidents" Type="int" />
+    <Property Name="AwareProgram" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="educationalvisitcases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CaseID" Type="int" />
+    <Property Name="PlannedVisitDate" Type="datetime" Precision="0" />
+    <Property Name="VisitDate" Type="datetime" Precision="0" />
+    <Property Name="Presenter" Type="varchar" MaxLength="50" />
+    <Property Name="EventType" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPersonID" Type="int" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="NoOfAtendees" Type="int" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar" MaxLength="100" />
+    <Property Name="CommDist" Type="varchar" MaxLength="50" />
+    <Property Name="SubDivComName" Type="varchar" MaxLength="50" />
+    <Property Name="SubDivLegName" Type="varchar" MaxLength="50" />
+    <Property Name="WMDwaterManDisct" Type="varchar" MaxLength="50" />
+    <Property Name="OrganizationType" Type="varchar" MaxLength="50" />
+    <Property Name="Youth" Type="varchar" MaxLength="50" />
+    <Property Name="Grade" Type="varchar" MaxLength="50" />
+    <Property Name="SchoolName" Type="varchar" MaxLength="50" />
+    <Property Name="SchoolAddress" Type="varchar" MaxLength="100" />
+    <Property Name="AdultType" Type="varchar" MaxLength="50" />
+    <Property Name="EICLocation" Type="varchar" MaxLength="50" />
+    <Property Name="Partnership" Type="bool" />
+    <Property Name="PartnerName" Type="varchar" MaxLength="50" />
+    <Property Name="MaterialName" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="CostPerMaterial" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ExtendedCost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="events">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="ActionTypeID" Type="int" />
+    <Property Name="CaseID" Type="int" Nullable="false" />
+    <Property Name="ResponsibleID" Type="int" />
+    <Property Name="TargetDate" Type="datetime" Precision="0" />
+    <Property Name="TargetDateEnd" Type="datetime" Precision="0" />
+    <Property Name="ActualDate" Type="datetime" Precision="0" />
+    <Property Name="ActualDateEnd" Type="datetime" Precision="0" />
+    <Property Name="Comments" Type="varchar" MaxLength="7000" />
+    <Property Name="PreviousStepID" Type="int" />
+    <Property Name="PreviousStepName" Type="varchar" MaxLength="50" />
+    <Property Name="NewStepID" Type="int" />
+    <Property Name="NewStepName" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="StepChangeDate" Type="datetime" Precision="0" />
+    <Property Name="LandscapeInspected" Type="varchar" MaxLength="20" />
+    <Property Name="NumUnitsSurveyed" Type="int" />
+    <Property Name="Language" Type="varchar" MaxLength="50" />
+    <Property Name="EventTimeRange" Type="varchar" MaxLength="50" />
+    <Property Name="DevicesInstalled" Type="varchar" MaxLength="3" />
+    <Property Name="ClothesWasher" Type="varchar" MaxLength="100" />
+    <Property Name="LeakDetected" Type="varchar" MaxLength="100" />
+    <Property Name="DevicesPostInspected" Type="varchar" MaxLength="500" />
+    <Property Name="InspectorID" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="generalsettings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="AllowPropertyEditing" Type="bool" />
+    <Property Name="ShowActivePhasesOnly" Type="bool" />
+    <Property Name="LandingPage" Type="varchar" MaxLength="100" />
+    <Property Name="NewCaseDefaultPhase" Type="varchar" MaxLength="200" />
+    <Property Name="DateLastBillingUpdate" Type="datetime" Precision="0" />
+    <Property Name="DateNextPlannedBillingUpdate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="gridfields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="100" />
+    <Property Name="CodeText" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Caption" Type="varchar" MaxLength="100" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="FieldOrder" Type="int" />
+    <Property Name="IsVisible" Type="bool" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Width" Type="int" />
+    <Property Name="WordWrap" Type="bool" />
+  </EntityType>
+  <EntityType Name="interventions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CaseID" Type="int" Nullable="false" />
+    <Property Name="InterventionTypeID" Type="int" />
+    <Property Name="MaterialCost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="LaborCost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Subsidy" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="InterventionDate" Type="datetime" Precision="0" />
+    <Property Name="Repetitions" Type="int" />
+    <Property Name="Responsible" Type="varchar" MaxLength="50" />
+    <Property Name="PredictedWaterSavings" Type="bigint" />
+    <Property Name="WorkOrderNum" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar" MaxLength="3000" />
+    <Property Name="FundingType" Type="char" MaxLength="2" />
+    <Property Name="NewDeviceID" Type="int" />
+    <Property Name="OldDeviceID" Type="int" />
+    <Property Name="ProcessImpName" Type="varchar" MaxLength="100" />
+    <Property Name="ProcessImpDescription" Type="varchar" MaxLength="4000" />
+    <Property Name="ProcessImpType" Type="varchar" MaxLength="50" />
+    <Property Name="WaterBroomAreaToClean" Type="varchar" MaxLength="50" />
+    <Property Name="UnitNo" Type="varchar" MaxLength="10" />
+    <Property Name="IncludeInActualSavingsCalc" Type="bool" />
+    <Property Name="TotalRecieptAmount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalDeviceCost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ImportID" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="irrigationalcases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CaseID" Type="int" Nullable="false" />
+    <Property Name="IrrigationType" Type="varchar" MaxLength="20" />
+    <Property Name="ControllerProgrammer" Type="varchar" MaxLength="20" />
+    <Property Name="GardenerID" Type="int" />
+    <Property Name="ControllerProgrammerDates" Type="varchar" MaxLength="80" />
+    <Property Name="StickerPosted" Type="bool" />
+    <Property Name="EducationalPacketGiven" Type="bool" />
+    <Property Name="OrdinanceInfoDiscussed" Type="bool" />
+    <Property Name="WaterUsageReviewed" Type="bool" />
+    <Property Name="IrrigationIssuesReviewed" Type="bool" />
+    <Property Name="RunoffOnSite" Type="bool" />
+    <Property Name="DeviceInstalled" Type="bool" />
+    <Property Name="DeviceFunctioning" Type="bool" />
+    <Property Name="LandscapeHealthImproved" Type="bool" />
+    <Property Name="IrrigationIssuesAddressed" Type="bool" />
+    <Property Name="RunoffReduction" Type="bool" />
+    <Property Name="UsageRank" Type="varchar" MaxLength="25" />
+    <Property Name="AnnUsage" Type="varchar" MaxLength="25" />
+    <Property Name="InstallerName" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="NumberOfFlags" Type="int" />
+    <Property Name="LandscapedArea" Type="int" />
+  </EntityType>
+  <EntityType Name="listitems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Value" Type="varchar" MaxLength="250" />
+    <Property Name="FieldOrder" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="meterreads">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="ServiceID" Type="int" />
+    <Property Name="ReadDate" Type="datetime" Precision="0" />
+    <Property Name="Reading" Type="bigint" />
+    <Property Name="Consumption" Type="bigint" />
+    <Property Name="ReadCode" Type="varchar" MaxLength="50" />
+    <Property Name="CustMtrReadKeyID" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="newslettercontacts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewsLetterID" Type="int" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="SendDate" Type="datetime" Precision="0" />
+    <Property Name="SentBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="newsletters">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="NewsLetterContent" Type="varchar" MaxLength="300" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModDate" Type="varchar" MaxLength="50" />
+    <Property Name="ModBy" Type="int" />
+  </EntityType>
+  <EntityType Name="organizations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="300" />
+    <Property Name="Attn" Type="varchar" MaxLength="100" />
+    <Property Name="Street1" Type="varchar" MaxLength="200" />
+    <Property Name="Street2" Type="varchar" MaxLength="200" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="25" />
+    <Property Name="PhoneArea" Type="varchar" MaxLength="3" />
+    <Property Name="EMail" Type="varchar" MaxLength="120" />
+    <Property Name="Fax" Type="varchar" MaxLength="25" />
+    <Property Name="FaxArea" Type="varchar" MaxLength="3" />
+    <Property Name="Webpage" Type="varchar" MaxLength="150" />
+    <Property Name="Comments" Type="varchar" MaxLength="3000" />
+    <Property Name="ImportDate" Type="datetime" Precision="0" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="packages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Duration" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="UserLimit" Type="int" />
+    <Property Name="PropertiesLimit" Type="int" />
+    <Property Name="AccountLimit" Type="int" />
+    <Property Name="AllowUrl" Type="bool" />
+    <Property Name="EmailSupport" Type="bool" />
+    <Property Name="PhoneSupport" Type="bool" />
+    <Property Name="OnsiteSupport" Type="bool" />
+    <Property Name="DataMigration" Type="bool" />
+  </EntityType>
+  <EntityType Name="paymenthistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="PaymentMode" Type="varchar" MaxLength="50" />
+    <Property Name="CardHolderName" Type="varchar" MaxLength="50" />
+    <Property Name="StreetNo" Type="varchar" MaxLength="50" />
+    <Property Name="StreetName" Type="varchar" MaxLength="50" />
+    <Property Name="HoldingNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="SecurityCode" Type="varchar" MaxLength="50" />
+    <Property Name="IsAutoPayment" Type="bool" />
+    <Property Name="IsDebitCard" Type="bool" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="PaymentDate" Type="datetime" Precision="0" />
+    <Property Name="PaymentSuccess" Type="bool" />
+    <Property Name="ResponseCode" Type="varchar" MaxLength="50" />
+    <Property Name="Response" Type="varchar" MaxLength="500" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+  </EntityType>
+  <EntityType Name="people">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="250" />
+    <Property Name="LastName" Type="varchar" MaxLength="250" />
+    <Property Name="Attn" Type="varchar" MaxLength="100" />
+    <Property Name="Street1" Type="varchar" MaxLength="100" />
+    <Property Name="Street2" Type="varchar" MaxLength="100" />
+    <Property Name="Street3" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="25" />
+    <Property Name="HomePhoneArea" Type="varchar" MaxLength="3" />
+    <Property Name="WorkPhone" Type="varchar" MaxLength="25" />
+    <Property Name="WorkPhoneArea" Type="varchar" MaxLength="3" />
+    <Property Name="Cell" Type="varchar" MaxLength="25" />
+    <Property Name="CellArea" Type="varchar" MaxLength="3" />
+    <Property Name="Fax" Type="varchar" MaxLength="25" />
+    <Property Name="FaxArea" Type="varchar" MaxLength="3" />
+    <Property Name="EMail" Type="varchar" MaxLength="120" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="ContactMethod" Type="varchar" MaxLength="25" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="3000" />
+    <Property Name="ImportID" Type="int" />
+    <Property Name="ImportBlockNo" Type="varchar" MaxLength="10" />
+    <Property Name="ImportLotNo" Type="varchar" MaxLength="10" />
+    <Property Name="ImportAccountNumber" Type="varchar" MaxLength="25" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="ImportCaseID" Type="int" />
+    <Property Name="PremiseNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ParcelNumber" Type="varchar" MaxLength="50" />
+    <Property Name="SSNNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="LockUpdate" Type="bool" />
+    <Property Name="EducationalVisitID" Type="int" />
+    <Property Name="TempAccountNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ImportDate" Type="datetime" Precision="0" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="peoplepeopletype">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PeopleID" Type="int" />
+    <Property Name="PeopleTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="peopletypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="2" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="phases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="ProgramID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="3000" />
+    <Property Name="StartDate" Type="datetime" Precision="0" />
+    <Property Name="EndDate" Type="datetime" Precision="0" />
+    <Property Name="Budget" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PredictedWaterSavings" Type="bigint" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="programdevicemodels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramID" Type="int" Nullable="false" />
+    <Property Name="DeviceModelID" Type="int" Nullable="false" />
+    <Property Name="IsNew" Type="bool" />
+  </EntityType>
+  <EntityType Name="programdevicetypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramID" Type="int" Nullable="false" />
+    <Property Name="DeviceTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="programinterventiontypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramID" Type="int" Nullable="false" />
+    <Property Name="InterventionTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="programs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Type" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ShortName" Type="varchar" MaxLength="25" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="IncludeInMatrix" Type="bool" />
+    <Property Name="Visible" Type="bool" />
+    <Property Name="OwnerDefaultParticipant" Type="bool" />
+    <Property Name="Modules" Type="varchar" MaxLength="1000" />
+    <Property Name="FundingType" Type="char" MaxLength="2" />
+    <Property Name="Incentives" Type="varchar" MaxLength="100" />
+    <Property Name="DefaultRCCase" Type="bool" />
+    <Property Name="DefaultWDOCandidateDeviceType" Type="varchar" MaxLength="50" />
+    <Property Name="VoucherValidDays" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+    <Property Name="EditRetrofitPage" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="programsteps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="Type" Type="char" MaxLength="3" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="DaysToNext" Type="int" />
+    <Property Name="DaysToExpire" Type="int" />
+    <Property Name="DaysToNotify" Type="int" />
+    <Property Name="NextStepID" Type="int" />
+    <Property Name="NestStepName" Type="varchar" MaxLength="50" />
+    <Property Name="StepOrder" Type="int" />
+    <Property Name="ActionTypeID" Type="int" />
+    <Property Name="ActionComments" Type="varchar" MaxLength="1000" />
+    <Property Name="ActionReportName" Type="varchar" MaxLength="100" />
+    <Property Name="ActionReportType" Type="char" MaxLength="3" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="properties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="RandomID" Type="int" />
+    <Property Name="BlockNo" Type="varchar" MaxLength="10" />
+    <Property Name="LotNo" Type="varchar" MaxLength="10" />
+    <Property Name="AccountBase" Type="varchar" MaxLength="25" />
+    <Property Name="PremiseNum" Type="varchar" MaxLength="25" />
+    <Property Name="PIN" Type="varchar" MaxLength="50" />
+    <Property Name="APN" Type="varchar" MaxLength="50" />
+    <Property Name="TaxID" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+    <Property Name="Comments" Type="varchar" MaxLength="3000" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="UnitNum" Type="varchar" MaxLength="255" />
+    <Property Name="StreetNo" Type="varchar" MaxLength="10" />
+    <Property Name="StreetNoFrom" Type="int" />
+    <Property Name="StreetNoTo" Type="int" />
+    <Property Name="StreetName" Type="varchar" MaxLength="50" />
+    <Property Name="StreetSuffix" Type="varchar" MaxLength="15" />
+    <Property Name="StreetDir" Type="varchar" MaxLength="10" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="Jurisdiction" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="RegioninCountry" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="RegioninWorld" Type="varchar" MaxLength="50" />
+    <Property Name="ResidenceType" Type="varchar" MaxLength="20" />
+    <Property Name="Category" Type="varchar" MaxLength="20" />
+    <Property Name="UsageType" Type="varchar" MaxLength="400" />
+    <Property Name="YearBuilt" Type="int" />
+    <Property Name="PropertyTypeID" Type="int" />
+    <Property Name="LandType" Type="varchar" MaxLength="255" />
+    <Property Name="NumOfUnits" Type="int" />
+    <Property Name="Certified" Type="bool" />
+    <Property Name="LastAffidavitDate" Type="datetime" Precision="0" />
+    <Property Name="FloorNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Occupied" Type="bool" />
+    <Property Name="LotSize" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="NumOfOccupants" Type="int" />
+    <Property Name="LowIncome" Type="bool" />
+    <Property Name="FlowFactor" Type="float" />
+    <Property Name="CityorSub" Type="bool" />
+    <Property Name="ImportTapNo" Type="varchar" MaxLength="20" />
+    <Property Name="RestrictedDesc" Type="varchar" MaxLength="250" />
+    <Property Name="CaseNumber" Type="int" />
+    <Property Name="ContactPersonID" Type="int" />
+    <Property Name="MasterType" Type="varchar" MaxLength="100" />
+    <Property Name="ParcelSection" Type="varchar" MaxLength="50" />
+    <Property Name="ParcelTownship" Type="varchar" MaxLength="50" />
+    <Property Name="ParcelRange" Type="varchar" MaxLength="50" />
+    <Property Name="ParcelSubdivision" Type="varchar" MaxLength="50" />
+    <Property Name="ParcelDistrict" Type="varchar" MaxLength="50" />
+    <Property Name="GIS_Subdivision_Name" Type="varchar" MaxLength="255" />
+    <Property Name="GIS_Subdivision_No" Type="varchar" MaxLength="255" />
+    <Property Name="GIS_Subdivision_Plat" Type="varchar" MaxLength="255" />
+    <Property Name="GIS_Subdivision_Page" Type="varchar" MaxLength="255" />
+    <Property Name="GIS_ParcelValue" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="LivingArea" Type="int" />
+    <Property Name="Commissioner_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Commissioner_District" Type="varchar" MaxLength="100" />
+    <Property Name="WaterMgtDistrict" Type="varchar" MaxLength="100" />
+    <Property Name="NumBuildings" Type="int" />
+    <Property Name="GroupName" Type="varchar" MaxLength="50" />
+    <Property Name="LockUpdate" Type="bool" />
+    <Property Name="PropertyTypeCustomersName" Type="varchar" MaxLength="255" />
+    <Property Name="OwnerOccOrRental" Type="bool" />
+    <Property Name="PremiseNumOLD" Type="varchar" MaxLength="255" />
+    <Property Name="BldgSizeGross" Type="varchar" MaxLength="50" />
+    <Property Name="RevClassCode" Type="varchar" MaxLength="100" />
+    <Property Name="EstimatedIrrArea" Type="varchar" MaxLength="50" />
+    <Property Name="NumUnitsActual" Type="int" />
+    <Property Name="NumOccupantsActual" Type="int" />
+    <Property Name="ImportDate" Type="datetime" Precision="0" />
+    <Property Name="RecordationDate" Type="datetime" Precision="0" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="propertiesservices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PropertyID" Type="int" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="propertyowners">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PropertyID" Type="int" Nullable="false" />
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="IsCurrentOwner" Type="bool" />
+    <Property Name="PercentOwnerShip" Type="int" />
+    <Property Name="Organization" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="regions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Number" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Color" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="savingsfactors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="EffLevelID" Type="int" Nullable="false" />
+    <Property Name="PropertyTypeID" Type="int" Nullable="false" />
+    <Property Name="PredSavingsFactor" Type="float" />
+  </EntityType>
+  <EntityType Name="services">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="SvcNumber" Type="varchar" MaxLength="25" />
+    <Property Name="PremiseNum" Type="varchar" MaxLength="255" />
+    <Property Name="AcctNumber" Type="varchar" MaxLength="20" />
+    <Property Name="AccountBase" Type="varchar" MaxLength="25" />
+    <Property Name="Block" Type="varchar" MaxLength="10" />
+    <Property Name="Lot" Type="varchar" MaxLength="10" />
+    <Property Name="SvcType" Type="varchar" MaxLength="10" />
+    <Property Name="SvcSize" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+    <Property Name="StreetNo" Type="varchar" MaxLength="50" />
+    <Property Name="StreetNoFrom" Type="int" />
+    <Property Name="StreetNoTo" Type="int" />
+    <Property Name="StreetName" Type="varchar" MaxLength="50" />
+    <Property Name="StreetSuffix" Type="varchar" MaxLength="255" />
+    <Property Name="StreetDir" Type="varchar" MaxLength="10" />
+    <Property Name="Address2" Type="varchar" MaxLength="25" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="DateSvcInstall" Type="datetime" Precision="0" />
+    <Property Name="DateSvcRenew" Type="datetime" Precision="0" />
+    <Property Name="DateSvcEnd" Type="datetime" Precision="0" />
+    <Property Name="SPResivoirCode" Type="char" MaxLength="10" />
+    <Property Name="FlagMultiTap" Type="char" MaxLength="1" />
+    <Property Name="FlagMultiMtr" Type="char" MaxLength="1" />
+    <Property Name="DistrictID" Type="char" MaxLength="2" />
+    <Property Name="DescWhatMtrServs" Type="varchar" MaxLength="255" />
+    <Property Name="StructureDesc" Type="varchar" MaxLength="255" />
+    <Property Name="MainDirection" Type="varchar" MaxLength="1000" />
+    <Property Name="TapDirection" Type="varchar" MaxLength="1000" />
+    <Property Name="MtrDirection" Type="varchar" MaxLength="1000" />
+    <Property Name="MainNumFeet" Type="varchar" MaxLength="10" />
+    <Property Name="MainAddrDir1" Type="varchar" MaxLength="50" />
+    <Property Name="MainAddrDir2" Type="varchar" MaxLength="50" />
+    <Property Name="MainAddrBase" Type="varchar" MaxLength="20" />
+    <Property Name="MainAddrStreet" Type="varchar" MaxLength="30" />
+    <Property Name="MainAddrSffx" Type="varchar" MaxLength="10" />
+    <Property Name="TapNumFeet" Type="varchar" MaxLength="10" />
+    <Property Name="TapAddrDir1" Type="varchar" MaxLength="50" />
+    <Property Name="TapAddrDir2" Type="varchar" MaxLength="50" />
+    <Property Name="TapAddrBase" Type="varchar" MaxLength="20" />
+    <Property Name="TapAddrStreet" Type="varchar" MaxLength="30" />
+    <Property Name="TapAddrSffx" Type="varchar" MaxLength="10" />
+    <Property Name="TapType" Type="varchar" MaxLength="10" />
+    <Property Name="TapBlock" Type="char" MaxLength="5" />
+    <Property Name="TapNumber" Type="varchar" MaxLength="20" />
+    <Property Name="MtrConnectionNum" Type="varchar" MaxLength="50" />
+    <Property Name="MtrNumber" Type="varchar" MaxLength="50" />
+    <Property Name="MtrType" Type="varchar" MaxLength="255" />
+    <Property Name="MtrSize" Type="varchar" MaxLength="10" />
+    <Property Name="MtrMake" Type="varchar" MaxLength="30" />
+    <Property Name="MtrConnectionLocn" Type="varchar" MaxLength="255" />
+    <Property Name="MtrReaderComments" Type="varchar" MaxLength="200" />
+    <Property Name="ImportDate" Type="datetime" Precision="0" />
+    <Property Name="Route" Type="varchar" MaxLength="50" />
+    <Property Name="Sequence" Type="varchar" MaxLength="50" />
+    <Property Name="PremiseNumOLD" Type="varchar" MaxLength="255" />
+    <Property Name="LockUpdate" Type="bool" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ModBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servicetypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SvcTypeCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SvcTypeName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="supporttickets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="TicketDate" Type="datetime" Precision="0" />
+    <Property Name="RequesterID" Type="int" />
+    <Property Name="Title" Type="varchar" MaxLength="100" />
+    <Property Name="Priority" Type="varchar" MaxLength="10" />
+    <Property Name="Comments" Type="varchar" MaxLength="200" />
+    <Property Name="ResolvedID" Type="int" />
+    <Property Name="ResolveDate" Type="datetime" Precision="0" />
+    <Property Name="ResolverComments" Type="varchar" MaxLength="500" />
+    <Property Name="TicketStatus" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="surveyareas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="SurveyCaseID" Type="int" />
+    <Property Name="InterventionID" Type="int" />
+    <Property Name="AreaType" Type="char" MaxLength="3" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+    <Property Name="ToiletDeviceID" Type="int" />
+    <Property Name="FaucetDeviceID" Type="int" />
+    <Property Name="ShowerHeadDeviceID" Type="int" />
+    <Property Name="DishWasherID" Type="int" />
+    <Property Name="ClothesWasherID" Type="int" />
+    <Property Name="AreaSize" Type="int" />
+    <Property Name="WaterApplicationRate" Type="int" />
+    <Property Name="PercentIrrigated" Type="int" />
+    <Property Name="IrrigationCircuit1" Type="bool" />
+    <Property Name="IrrigationCircuit2" Type="bool" />
+    <Property Name="IrrigationCircuit3" Type="bool" />
+    <Property Name="IrrigationCircuit4" Type="bool" />
+    <Property Name="IrrigationCircuit5" Type="bool" />
+    <Property Name="IrrigationCircuit6" Type="bool" />
+    <Property Name="IrrigationCircuit7" Type="bool" />
+    <Property Name="IrrigationCircuit8" Type="bool" />
+    <Property Name="IrrigationCircuit9" Type="bool" />
+    <Property Name="IrrigationCircuit10" Type="bool" />
+    <Property Name="IrrigationCircuit11" Type="bool" />
+    <Property Name="IrrigationCircuit12" Type="bool" />
+    <Property Name="PlantType1" Type="varchar" MaxLength="30" />
+    <Property Name="PlantType2" Type="varchar" MaxLength="30" />
+    <Property Name="PlantType3" Type="varchar" MaxLength="30" />
+    <Property Name="PlantType1Percent" Type="int" />
+    <Property Name="PlantType3Percent" Type="int" />
+    <Property Name="PlantType2Percent" Type="int" />
+    <Property Name="SoilType" Type="varchar" MaxLength="30" />
+    <Property Name="Slope" Type="varchar" MaxLength="30" />
+    <Property Name="SunExposure" Type="varchar" MaxLength="30" />
+    <Property Name="PotentialSavings" Type="float" />
+    <Property Name="FlowRate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="surveycases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CaseID" Type="int" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="InterventionID" Type="int" />
+    <Property Name="SurveyTypeID" Type="int" />
+    <Property Name="UnitNumber" Type="varchar" MaxLength="50" />
+    <Property Name="NumberOfOcupants" Type="int" />
+    <Property Name="NumberOfSimilarUnits" Type="int" />
+    <Property Name="PassFail" Type="char" MaxLength="1" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="systemtypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Value" Type="varchar" MaxLength="250" />
+    <Property Name="FieldOrder" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ticketattachments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupportTicketID" Type="int" />
+    <Property Name="DocumentType" Type="varchar" MaxLength="20" />
+    <Property Name="FilePath" Type="varchar" MaxLength="100" />
+    <Property Name="UploadDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="DefaultPage" Type="varchar" MaxLength="50" />
+    <Property Name="DateCreated" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="DateLastLogin" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bool" />
+  </EntityType>
+  <EntityType Name="violationcases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CaseID" Type="int" Nullable="false" />
+    <Property Name="CitationNumber" Type="varchar" MaxLength="25" />
+    <Property Name="FineAmount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ViolationDateTime" Type="datetime" Precision="0" />
+    <Property Name="ViolationDateTime2" Type="datetime" Precision="0" />
+    <Property Name="ComplianceDate" Type="datetime" Precision="0" />
+    <Property Name="ViolationDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="AdditionalDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="CorrectiveAction" Type="varchar" MaxLength="1000" />
+    <Property Name="AdditionalAction" Type="varchar" MaxLength="1000" />
+    <Property Name="PhotoEvidence1" Type="varchar" MaxLength="100" />
+    <Property Name="PhotoEvidence2" Type="varchar" MaxLength="100" />
+    <Property Name="SourceSprinkler" Type="bool" />
+    <Property Name="SourceHose" Type="bool" />
+    <Property Name="SourceHoseSprinkler" Type="bool" />
+    <Property Name="SourceCurb" Type="bool" />
+    <Property Name="SourcePipe" Type="bool" />
+    <Property Name="SourceUnknown" Type="bool" />
+    <Property Name="SourceAfterHours" Type="bool" />
+    <Property Name="Runoff" Type="bool" />
+    <Property Name="GoingToStreet" Type="bool" />
+    <Property Name="GoingToDriveway" Type="bool" />
+    <Property Name="GoingToSideWalk" Type="bool" />
+    <Property Name="GoingToGutter" Type="bool" />
+    <Property Name="GoingToAlley" Type="bool" />
+    <Property Name="GoingToOther" Type="bool" />
+    <Property Name="ViolatorGender" Type="char" MaxLength="1" />
+    <Property Name="ViolatorType" Type="varchar" MaxLength="2" />
+    <Property Name="InCity" Type="bool" />
+    <Property Name="InspectorID" Type="int" />
+    <Property Name="ContactPersonID" Type="int" />
+    <Property Name="ViolationCodeID" Type="int" />
+    <Property Name="SourceOfWater" Type="varchar" MaxLength="50" />
+    <Property Name="Observer" Type="varchar" MaxLength="50" />
+    <Property Name="DatePlannedCuttoff" Type="datetime" Precision="0" />
+    <Property Name="DateActualCuttoff" Type="datetime" Precision="0" />
+    <Property Name="DaysToWater" Type="int" />
+    <Property Name="TimesToWater" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerViolationNumber" Type="int" />
+    <Property Name="NotAViolation" Type="bool" />
+    <Property Name="NotAViolationReason" Type="varchar" MaxLength="50" />
+    <Property Name="NotAViolationOtherReason" Type="varchar" MaxLength="100" />
+    <Property Name="PhotoEvidence1Patroller" Type="varchar" MaxLength="50" />
+    <Property Name="PhotoEvidence2Patroller" Type="varchar" MaxLength="50" />
+    <Property Name="InitialContactPatroller" Type="varchar" MaxLength="50" />
+    <Property Name="InitialContactDateTime" Type="datetime" Precision="0" />
+    <Property Name="InitialContactComments" Type="varchar" MaxLength="200" />
+    <Property Name="FollowupContactPatroller" Type="varchar" MaxLength="50" />
+    <Property Name="FollowupContactDateTime" Type="datetime" Precision="0" />
+    <Property Name="FollowupContactComments" Type="varchar" MaxLength="200" />
+    <Property Name="ReportSource" Type="varchar" MaxLength="50" />
+    <Property Name="LargeUser" Type="bool" />
+    <Property Name="LetterNumber" Type="int" />
+    <Property Name="cbkShutoff" Type="bool" />
+    <Property Name="DateShutoff" Type="datetime" Precision="0" />
+    <Property Name="cbkFlowRestrictor" Type="bool" />
+    <Property Name="DateFlowRestrictor" Type="datetime" Precision="0" />
+    <Property Name="ViolationDateTimeNew" Type="datetime" Precision="0" />
+    <Property Name="OtherViolationType" Type="varchar" MaxLength="1000" />
+    <Property Name="ViolationNumber" Type="varchar" MaxLength="50" />
+    <Property Name="WhatObserved" Type="varchar" MaxLength="255" />
+    <Property Name="DateMailed" Type="varchar" MaxLength="30" />
+    <Property Name="ViolationSent" Type="varchar" MaxLength="255" />
+    <Property Name="NumPropertyViolation" Type="int" />
+    <Property Name="RemovedDate" Type="datetime" Precision="0" />
+    <Property Name="RestoredDate" Type="datetime" Precision="0" />
+    <Property Name="RestorePaidDate" Type="datetime" Precision="0" />
+    <Property Name="DateComplianceDue" Type="datetime" Precision="0" />
+    <Property Name="VTNNumber" Type="varchar" MaxLength="50" />
+    <Property Name="IsSentToSpecialMagistrate" Type="bool" />
+    <Property Name="SentToSpecialMagistrateDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="violationcodes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="25" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="CorrectiveAction" Type="varchar" MaxLength="1000" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModDate" Type="datetime" Precision="0" />
+    <Property Name="ModBy" Type="int" />
+  </EntityType>
+  <EntityType Name="waterrates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="PropType" Type="varchar" MaxLength="50" />
+    <Property Name="SICCode" Type="char" MaxLength="10" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="BottomLimit" Type="int" />
+    <Property Name="TopLimit" Type="int" />
+    <Property Name="LevelRate" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="accounts_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="accounts" Type="Self.accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="accounts">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="accounts_ibfk_2">
+    <End Role="properties" Type="Self.properties" Multiplicity="0..1" />
+    <End Role="accounts" Type="Self.accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="properties">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="accounts">
+        <PropertyRef Name="PropertyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="accounts_ibfk_3">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="accounts" Type="Self.accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="accounts">
+        <PropertyRef Name="AccountHolderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="activitylog_ibfk_1">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="activitylog" Type="Self.activitylog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="activitylog">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="activitylog_ibfk_2">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="activitylog" Type="Self.activitylog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="activitylog">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="advertisementcases_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="advertisementcases" Type="Self.advertisementcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="advertisementcases">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="advertisementcases_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="0..1" />
+    <End Role="advertisementcases" Type="Self.advertisementcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="advertisementcases">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="campaigncases_ibfk_1">
+    <End Role="cases" Type="Self.cases" Multiplicity="0..1" />
+    <End Role="campaigncases" Type="Self.campaigncases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="campaigncases">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="campaignmaterials_ibfk_1">
+    <End Role="campaigncases" Type="Self.campaigncases" Multiplicity="0..1" />
+    <End Role="campaignmaterials" Type="Self.campaignmaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="campaigncases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="campaignmaterials">
+        <PropertyRef Name="CAMCaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="campaignmaterials_ibfk_2">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="campaignmaterials" Type="Self.campaignmaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="campaignmaterials">
+        <PropertyRef Name="AttendeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="casecontacts_ibfk_1">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="casecontacts" Type="Self.casecontacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="casecontacts">
+        <PropertyRef Name="PeopleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="casecontacts_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="0..1" />
+    <End Role="casecontacts" Type="Self.casecontacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="casecontacts">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_2">
+    <End Role="phases" Type="Self.phases" Multiplicity="1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="PhaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_3">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="ApplicantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_4">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="OwnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_5">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="InspectorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_6">
+    <End Role="organizations" Type="Self.organizations" Multiplicity="0..1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="organizations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="OwnerOrgID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_7">
+    <End Role="properties" Type="Self.properties" Multiplicity="0..1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="properties">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="PropertyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cases_ibfk_8">
+    <End Role="accounts" Type="Self.accounts" Multiplicity="0..1" />
+    <End Role="cases" Type="Self.cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cases">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cities_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="cities" Type="Self.cities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cities">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="clientgridfields_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="clientgridfields" Type="Self.clientgridfields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="clientgridfields">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="clients_ibfk_1">
+    <End Role="packages" Type="Self.packages" Multiplicity="0..1" />
+    <End Role="clients" Type="Self.clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="packages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="clients">
+        <PropertyRef Name="PackageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="consumptions_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="consumptions" Type="Self.consumptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="consumptions">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="consumptions_ibfk_2">
+    <End Role="services" Type="Self.services" Multiplicity="0..1" />
+    <End Role="consumptions" Type="Self.consumptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="consumptions">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="deviceefficiencylevels_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="deviceefficiencylevels" Type="Self.deviceefficiencylevels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="deviceefficiencylevels">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="deviceefficiencylevels_ibfk_2">
+    <End Role="devicetypes" Type="Self.devicetypes" Multiplicity="0..1" />
+    <End Role="deviceefficiencylevels" Type="Self.deviceefficiencylevels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devicetypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="deviceefficiencylevels">
+        <PropertyRef Name="DeviceTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="devicemodels_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="devicemodels" Type="Self.devicemodels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="devicemodels">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="devicemodels_ibfk_2">
+    <End Role="devicetypes" Type="Self.devicetypes" Multiplicity="1" />
+    <End Role="devicemodels" Type="Self.devicemodels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devicetypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="devicemodels">
+        <PropertyRef Name="DeviceTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="devices_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="devices" Type="Self.devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="devices">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="devices_ibfk_2">
+    <End Role="devicemodels" Type="Self.devicemodels" Multiplicity="0..1" />
+    <End Role="devices" Type="Self.devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devicemodels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="devices">
+        <PropertyRef Name="DeviceModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="devicetypes_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="devicetypes" Type="Self.devicetypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="devicetypes">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="documentations_ibfk_1">
+    <End Role="documentations" Type="Self.documentations" Multiplicity="0..1" />
+    <End Role="documentations1" Type="Self.documentations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="documentations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="documentations1">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="documentcontents_ibfk_1">
+    <End Role="documentations" Type="Self.documentations" Multiplicity="0..1" />
+    <End Role="documentcontents" Type="Self.documentcontents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="documentations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="documentcontents">
+        <PropertyRef Name="DocumentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="documentuploads_ibfk_1">
+    <End Role="documentations" Type="Self.documentations" Multiplicity="0..1" />
+    <End Role="documentuploads" Type="Self.documentuploads" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="documentations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="documentuploads">
+        <PropertyRef Name="DocumentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalmaterials_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="educationalmaterials" Type="Self.educationalmaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalmaterials">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalmaterials_ibfk_2">
+    <End Role="educationalvisitcases" Type="Self.educationalvisitcases" Multiplicity="0..1" />
+    <End Role="educationalmaterials" Type="Self.educationalmaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="educationalvisitcases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalmaterials">
+        <PropertyRef Name="EduCaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalmaterials_ibfk_3">
+    <End Role="organizations" Type="Self.organizations" Multiplicity="0..1" />
+    <End Role="educationalmaterials" Type="Self.educationalmaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="organizations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalmaterials">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalmaterials_ibfk_4">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="educationalmaterials" Type="Self.educationalmaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalmaterials">
+        <PropertyRef Name="ContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalvisitattendees_ibfk_1">
+    <End Role="educationalvisitcases" Type="Self.educationalvisitcases" Multiplicity="0..1" />
+    <End Role="educationalvisitattendees" Type="Self.educationalvisitattendees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="educationalvisitcases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalvisitattendees">
+        <PropertyRef Name="EduCaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalvisitcases_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="educationalvisitcases" Type="Self.educationalvisitcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalvisitcases">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalvisitcases_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="0..1" />
+    <End Role="educationalvisitcases" Type="Self.educationalvisitcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalvisitcases">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalvisitcases_ibfk_3">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="educationalvisitcases" Type="Self.educationalvisitcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalvisitcases">
+        <PropertyRef Name="ContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="educationalvisitcases_ibfk_4">
+    <End Role="organizations" Type="Self.organizations" Multiplicity="0..1" />
+    <End Role="educationalvisitcases" Type="Self.educationalvisitcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="organizations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="educationalvisitcases">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="events_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="events" Type="Self.events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="events">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="events_ibfk_2">
+    <End Role="systemtypes" Type="Self.systemtypes" Multiplicity="0..1" />
+    <End Role="events" Type="Self.events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemtypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="events">
+        <PropertyRef Name="ActionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="events_ibfk_3">
+    <End Role="cases" Type="Self.cases" Multiplicity="1" />
+    <End Role="events" Type="Self.events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="events">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="events_ibfk_4">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="events" Type="Self.events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="events">
+        <PropertyRef Name="ResponsibleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="events_ibfk_5">
+    <End Role="programsteps" Type="Self.programsteps" Multiplicity="0..1" />
+    <End Role="events" Type="Self.events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programsteps">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="events">
+        <PropertyRef Name="PreviousStepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="events_ibfk_6">
+    <End Role="programsteps" Type="Self.programsteps" Multiplicity="0..1" />
+    <End Role="events" Type="Self.events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programsteps">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="events">
+        <PropertyRef Name="NewStepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="generalsettings_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="generalsettings" Type="Self.generalsettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="generalsettings">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="interventions_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="interventions" Type="Self.interventions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="interventions">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="interventions_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="1" />
+    <End Role="interventions" Type="Self.interventions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="interventions">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="interventions_ibfk_3">
+    <End Role="systemtypes" Type="Self.systemtypes" Multiplicity="0..1" />
+    <End Role="interventions" Type="Self.interventions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemtypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="interventions">
+        <PropertyRef Name="InterventionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="interventions_ibfk_4">
+    <End Role="devices" Type="Self.devices" Multiplicity="0..1" />
+    <End Role="interventions" Type="Self.interventions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="interventions">
+        <PropertyRef Name="NewDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="interventions_ibfk_5">
+    <End Role="devices" Type="Self.devices" Multiplicity="0..1" />
+    <End Role="interventions" Type="Self.interventions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="interventions">
+        <PropertyRef Name="OldDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="irrigationalcases_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="irrigationalcases" Type="Self.irrigationalcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="irrigationalcases">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="irrigationalcases_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="1" />
+    <End Role="irrigationalcases" Type="Self.irrigationalcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="irrigationalcases">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="irrigationalcases_ibfk_3">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="irrigationalcases" Type="Self.irrigationalcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="irrigationalcases">
+        <PropertyRef Name="GardenerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="meterreads_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="meterreads" Type="Self.meterreads" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="meterreads">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="meterreads_ibfk_2">
+    <End Role="services" Type="Self.services" Multiplicity="0..1" />
+    <End Role="meterreads" Type="Self.meterreads" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="meterreads">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="newslettercontacts_ibfk_1">
+    <End Role="newsletters" Type="Self.newsletters" Multiplicity="0..1" />
+    <End Role="newslettercontacts" Type="Self.newslettercontacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="newsletters">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="newslettercontacts">
+        <PropertyRef Name="NewsLetterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="newslettercontacts_ibfk_2">
+    <End Role="contacts" Type="Self.contacts" Multiplicity="0..1" />
+    <End Role="newslettercontacts" Type="Self.newslettercontacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="newslettercontacts">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="organizations_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="organizations" Type="Self.organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="organizations">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="paymenthistory_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="paymenthistory" Type="Self.paymenthistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="paymenthistory">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="people_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="people" Type="Self.people" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="people">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="peoplepeopletype_ibfk_1">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="peoplepeopletype" Type="Self.peoplepeopletype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="peoplepeopletype">
+        <PropertyRef Name="PeopleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="peoplepeopletype_ibfk_2">
+    <End Role="peopletypes" Type="Self.peopletypes" Multiplicity="0..1" />
+    <End Role="peoplepeopletype" Type="Self.peoplepeopletype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="peopletypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="peoplepeopletype">
+        <PropertyRef Name="PeopleTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="phases_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="phases" Type="Self.phases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="phases">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="phases_ibfk_2">
+    <End Role="programs" Type="Self.programs" Multiplicity="1" />
+    <End Role="phases" Type="Self.phases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="phases">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programdevicemodels_ibfk_1">
+    <End Role="programs" Type="Self.programs" Multiplicity="1" />
+    <End Role="programdevicemodels" Type="Self.programdevicemodels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programdevicemodels">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programdevicemodels_ibfk_2">
+    <End Role="devicemodels" Type="Self.devicemodels" Multiplicity="1" />
+    <End Role="programdevicemodels" Type="Self.programdevicemodels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devicemodels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programdevicemodels">
+        <PropertyRef Name="DeviceModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programdevicetypes_ibfk_1">
+    <End Role="programs" Type="Self.programs" Multiplicity="1" />
+    <End Role="programdevicetypes" Type="Self.programdevicetypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programdevicetypes">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programdevicetypes_ibfk_2">
+    <End Role="devicetypes" Type="Self.devicetypes" Multiplicity="1" />
+    <End Role="programdevicetypes" Type="Self.programdevicetypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devicetypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programdevicetypes">
+        <PropertyRef Name="DeviceTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programinterventiontypes_ibfk_1">
+    <End Role="programs" Type="Self.programs" Multiplicity="1" />
+    <End Role="programinterventiontypes" Type="Self.programinterventiontypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programinterventiontypes">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programinterventiontypes_ibfk_2">
+    <End Role="systemtypes" Type="Self.systemtypes" Multiplicity="1" />
+    <End Role="programinterventiontypes" Type="Self.programinterventiontypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemtypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programinterventiontypes">
+        <PropertyRef Name="InterventionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programs_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="programs" Type="Self.programs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programs">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programsteps_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="programsteps" Type="Self.programsteps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programsteps">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programsteps_ibfk_2">
+    <End Role="programs" Type="Self.programs" Multiplicity="0..1" />
+    <End Role="programsteps" Type="Self.programsteps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programsteps">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programsteps_ibfk_3">
+    <End Role="systemtypes" Type="Self.systemtypes" Multiplicity="0..1" />
+    <End Role="programsteps" Type="Self.programsteps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemtypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programsteps">
+        <PropertyRef Name="ActionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="programsteps_ibfk_4">
+    <End Role="systemtypes" Type="Self.systemtypes" Multiplicity="0..1" />
+    <End Role="programsteps" Type="Self.programsteps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemtypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="programsteps">
+        <PropertyRef Name="NextStepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="properties_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="properties" Type="Self.properties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="properties">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="properties_ibfk_2">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="properties" Type="Self.properties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="properties">
+        <PropertyRef Name="ContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="propertiesservices_ibfk_1">
+    <End Role="properties" Type="Self.properties" Multiplicity="1" />
+    <End Role="propertiesservices" Type="Self.propertiesservices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="properties">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="propertiesservices">
+        <PropertyRef Name="PropertyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="propertiesservices_ibfk_2">
+    <End Role="services" Type="Self.services" Multiplicity="1" />
+    <End Role="propertiesservices" Type="Self.propertiesservices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="propertiesservices">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="propertyowners_ibfk_1">
+    <End Role="properties" Type="Self.properties" Multiplicity="1" />
+    <End Role="propertyowners" Type="Self.propertyowners" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="properties">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="propertyowners">
+        <PropertyRef Name="PropertyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="propertyowners_ibfk_2">
+    <End Role="people" Type="Self.people" Multiplicity="1" />
+    <End Role="propertyowners" Type="Self.propertyowners" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="propertyowners">
+        <PropertyRef Name="OwnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="regions_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="regions" Type="Self.regions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="regions">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="savingsfactors_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="savingsfactors" Type="Self.savingsfactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="savingsfactors">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="savingsfactors_ibfk_2">
+    <End Role="devicetypes" Type="Self.devicetypes" Multiplicity="1" />
+    <End Role="savingsfactors" Type="Self.savingsfactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devicetypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="savingsfactors">
+        <PropertyRef Name="EffLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="savingsfactors_ibfk_3">
+    <End Role="systemtypes" Type="Self.systemtypes" Multiplicity="1" />
+    <End Role="savingsfactors" Type="Self.savingsfactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemtypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="savingsfactors">
+        <PropertyRef Name="PropertyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="services" Type="Self.services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="services">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="supporttickets_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="supporttickets" Type="Self.supporttickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="supporttickets">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="supporttickets_ibfk_2">
+    <End Role="contacts" Type="Self.contacts" Multiplicity="0..1" />
+    <End Role="supporttickets" Type="Self.supporttickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="supporttickets">
+        <PropertyRef Name="RequesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="SurveyCaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_3">
+    <End Role="interventions" Type="Self.interventions" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="interventions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="InterventionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_4">
+    <End Role="devices" Type="Self.devices" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="ToiletDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_5">
+    <End Role="devices" Type="Self.devices" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="FaucetDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_6">
+    <End Role="devices" Type="Self.devices" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="ShowerHeadDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_7">
+    <End Role="devices" Type="Self.devices" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="DishWasherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveyareas_ibfk_8">
+    <End Role="devices" Type="Self.devices" Multiplicity="0..1" />
+    <End Role="surveyareas" Type="Self.surveyareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveyareas">
+        <PropertyRef Name="ClothesWasherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveycases_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="surveycases" Type="Self.surveycases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveycases">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveycases_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="0..1" />
+    <End Role="surveycases" Type="Self.surveycases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveycases">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveycases_ibfk_3">
+    <End Role="interventions" Type="Self.interventions" Multiplicity="0..1" />
+    <End Role="surveycases" Type="Self.surveycases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="interventions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveycases">
+        <PropertyRef Name="InterventionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="surveycases_ibfk_4">
+    <End Role="systemtypes" Type="Self.systemtypes" Multiplicity="0..1" />
+    <End Role="surveycases" Type="Self.surveycases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemtypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="surveycases">
+        <PropertyRef Name="SurveyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ticketattachments_ibfk_1">
+    <End Role="supporttickets" Type="Self.supporttickets" Multiplicity="0..1" />
+    <End Role="ticketattachments" Type="Self.ticketattachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supporttickets">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ticketattachments">
+        <PropertyRef Name="SupportTicketID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="users_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="violationcases_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="violationcases" Type="Self.violationcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="violationcases">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="violationcases_ibfk_2">
+    <End Role="cases" Type="Self.cases" Multiplicity="1" />
+    <End Role="violationcases" Type="Self.violationcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="violationcases">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="violationcases_ibfk_3">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="violationcases" Type="Self.violationcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="violationcases">
+        <PropertyRef Name="InspectorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="violationcases_ibfk_4">
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
+    <End Role="violationcases" Type="Self.violationcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="violationcases">
+        <PropertyRef Name="ContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="violationcases_ibfk_5">
+    <End Role="violationcodes" Type="Self.violationcodes" Multiplicity="0..1" />
+    <End Role="violationcases" Type="Self.violationcases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="violationcodes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="violationcases">
+        <PropertyRef Name="ViolationCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="violationcodes_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="violationcodes" Type="Self.violationcodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="violationcodes">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="waterrates_ibfk_1">
+    <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+    <End Role="waterrates" Type="Self.waterrates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="waterrates">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="waterconsModelStoreContainer">
+    <EntitySet Name="accounts" EntityType="Self.accounts" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="activitylog" EntityType="Self.activitylog" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="advertisementcases" EntityType="Self.advertisementcases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="applicationmenu" EntityType="Self.applicationmenu" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="campaigncases" EntityType="Self.campaigncases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="campaignmaterials" EntityType="Self.campaignmaterials" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="casecontacts" EntityType="Self.casecontacts" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="cases" EntityType="Self.cases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="cities" EntityType="Self.cities" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="clientgridfields" EntityType="Self.clientgridfields" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="clients" EntityType="Self.clients" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="consumptions" EntityType="Self.consumptions" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="contacts" EntityType="Self.contacts" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="deviceefficiencylevels" EntityType="Self.deviceefficiencylevels" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="devicemodels" EntityType="Self.devicemodels" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="devices" EntityType="Self.devices" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="devicetypes" EntityType="Self.devicetypes" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="documentations" EntityType="Self.documentations" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="documentcontents" EntityType="Self.documentcontents" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="documentuploads" EntityType="Self.documentuploads" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="educationalmaterials" EntityType="Self.educationalmaterials" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="educationalvisitattendees" EntityType="Self.educationalvisitattendees" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="educationalvisitcases" EntityType="Self.educationalvisitcases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="events" EntityType="Self.events" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="generalsettings" EntityType="Self.generalsettings" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="gridfields" EntityType="Self.gridfields" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="interventions" EntityType="Self.interventions" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="irrigationalcases" EntityType="Self.irrigationalcases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="listitems" EntityType="Self.listitems" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="meterreads" EntityType="Self.meterreads" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="newslettercontacts" EntityType="Self.newslettercontacts" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="newsletters" EntityType="Self.newsletters" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="organizations" EntityType="Self.organizations" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="packages" EntityType="Self.packages" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="paymenthistory" EntityType="Self.paymenthistory" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="people" EntityType="Self.people" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="peoplepeopletype" EntityType="Self.peoplepeopletype" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="peopletypes" EntityType="Self.peopletypes" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="phases" EntityType="Self.phases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="programdevicemodels" EntityType="Self.programdevicemodels" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="programdevicetypes" EntityType="Self.programdevicetypes" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="programinterventiontypes" EntityType="Self.programinterventiontypes" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="programs" EntityType="Self.programs" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="programsteps" EntityType="Self.programsteps" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="properties" EntityType="Self.properties" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="propertiesservices" EntityType="Self.propertiesservices" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="propertyowners" EntityType="Self.propertyowners" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="regions" EntityType="Self.regions" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="savingsfactors" EntityType="Self.savingsfactors" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="services" EntityType="Self.services" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="servicetypes" EntityType="Self.servicetypes" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="supporttickets" EntityType="Self.supporttickets" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="surveyareas" EntityType="Self.surveyareas" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="surveycases" EntityType="Self.surveycases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="systemtypes" EntityType="Self.systemtypes" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="ticketattachments" EntityType="Self.ticketattachments" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="violationcases" EntityType="Self.violationcases" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="violationcodes" EntityType="Self.violationcodes" Schema="watercons" store:Type="Tables" />
+    <EntitySet Name="waterrates" EntityType="Self.waterrates" Schema="watercons" store:Type="Tables" />
+    <AssociationSet Name="accounts_ibfk_1" Association="Self.accounts_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="accounts" EntitySet="accounts" />
+    </AssociationSet>
+    <AssociationSet Name="accounts_ibfk_2" Association="Self.accounts_ibfk_2">
+      <End Role="properties" EntitySet="properties" />
+      <End Role="accounts" EntitySet="accounts" />
+    </AssociationSet>
+    <AssociationSet Name="accounts_ibfk_3" Association="Self.accounts_ibfk_3">
+      <End Role="people" EntitySet="people" />
+      <End Role="accounts" EntitySet="accounts" />
+    </AssociationSet>
+    <AssociationSet Name="activitylog_ibfk_1" Association="Self.activitylog_ibfk_1">
+      <End Role="users" EntitySet="users" />
+      <End Role="activitylog" EntitySet="activitylog" />
+    </AssociationSet>
+    <AssociationSet Name="activitylog_ibfk_2" Association="Self.activitylog_ibfk_2">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="activitylog" EntitySet="activitylog" />
+    </AssociationSet>
+    <AssociationSet Name="advertisementcases_ibfk_1" Association="Self.advertisementcases_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="advertisementcases" EntitySet="advertisementcases" />
+    </AssociationSet>
+    <AssociationSet Name="advertisementcases_ibfk_2" Association="Self.advertisementcases_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="advertisementcases" EntitySet="advertisementcases" />
+    </AssociationSet>
+    <AssociationSet Name="campaigncases_ibfk_1" Association="Self.campaigncases_ibfk_1">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="campaigncases" EntitySet="campaigncases" />
+    </AssociationSet>
+    <AssociationSet Name="campaignmaterials_ibfk_1" Association="Self.campaignmaterials_ibfk_1">
+      <End Role="campaigncases" EntitySet="campaigncases" />
+      <End Role="campaignmaterials" EntitySet="campaignmaterials" />
+    </AssociationSet>
+    <AssociationSet Name="campaignmaterials_ibfk_2" Association="Self.campaignmaterials_ibfk_2">
+      <End Role="people" EntitySet="people" />
+      <End Role="campaignmaterials" EntitySet="campaignmaterials" />
+    </AssociationSet>
+    <AssociationSet Name="casecontacts_ibfk_1" Association="Self.casecontacts_ibfk_1">
+      <End Role="people" EntitySet="people" />
+      <End Role="casecontacts" EntitySet="casecontacts" />
+    </AssociationSet>
+    <AssociationSet Name="casecontacts_ibfk_2" Association="Self.casecontacts_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="casecontacts" EntitySet="casecontacts" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_1" Association="Self.cases_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_2" Association="Self.cases_ibfk_2">
+      <End Role="phases" EntitySet="phases" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_3" Association="Self.cases_ibfk_3">
+      <End Role="people" EntitySet="people" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_4" Association="Self.cases_ibfk_4">
+      <End Role="people" EntitySet="people" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_5" Association="Self.cases_ibfk_5">
+      <End Role="people" EntitySet="people" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_6" Association="Self.cases_ibfk_6">
+      <End Role="organizations" EntitySet="organizations" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_7" Association="Self.cases_ibfk_7">
+      <End Role="properties" EntitySet="properties" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cases_ibfk_8" Association="Self.cases_ibfk_8">
+      <End Role="accounts" EntitySet="accounts" />
+      <End Role="cases" EntitySet="cases" />
+    </AssociationSet>
+    <AssociationSet Name="cities_ibfk_1" Association="Self.cities_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="cities" EntitySet="cities" />
+    </AssociationSet>
+    <AssociationSet Name="clientgridfields_ibfk_1" Association="Self.clientgridfields_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="clientgridfields" EntitySet="clientgridfields" />
+    </AssociationSet>
+    <AssociationSet Name="clients_ibfk_1" Association="Self.clients_ibfk_1">
+      <End Role="packages" EntitySet="packages" />
+      <End Role="clients" EntitySet="clients" />
+    </AssociationSet>
+    <AssociationSet Name="consumptions_ibfk_1" Association="Self.consumptions_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="consumptions" EntitySet="consumptions" />
+    </AssociationSet>
+    <AssociationSet Name="consumptions_ibfk_2" Association="Self.consumptions_ibfk_2">
+      <End Role="services" EntitySet="services" />
+      <End Role="consumptions" EntitySet="consumptions" />
+    </AssociationSet>
+    <AssociationSet Name="deviceefficiencylevels_ibfk_1" Association="Self.deviceefficiencylevels_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="deviceefficiencylevels" EntitySet="deviceefficiencylevels" />
+    </AssociationSet>
+    <AssociationSet Name="deviceefficiencylevels_ibfk_2" Association="Self.deviceefficiencylevels_ibfk_2">
+      <End Role="devicetypes" EntitySet="devicetypes" />
+      <End Role="deviceefficiencylevels" EntitySet="deviceefficiencylevels" />
+    </AssociationSet>
+    <AssociationSet Name="devicemodels_ibfk_1" Association="Self.devicemodels_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="devicemodels" EntitySet="devicemodels" />
+    </AssociationSet>
+    <AssociationSet Name="devicemodels_ibfk_2" Association="Self.devicemodels_ibfk_2">
+      <End Role="devicetypes" EntitySet="devicetypes" />
+      <End Role="devicemodels" EntitySet="devicemodels" />
+    </AssociationSet>
+    <AssociationSet Name="devices_ibfk_1" Association="Self.devices_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="devices" EntitySet="devices" />
+    </AssociationSet>
+    <AssociationSet Name="devices_ibfk_2" Association="Self.devices_ibfk_2">
+      <End Role="devicemodels" EntitySet="devicemodels" />
+      <End Role="devices" EntitySet="devices" />
+    </AssociationSet>
+    <AssociationSet Name="devicetypes_ibfk_1" Association="Self.devicetypes_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="devicetypes" EntitySet="devicetypes" />
+    </AssociationSet>
+    <AssociationSet Name="documentations_ibfk_1" Association="Self.documentations_ibfk_1">
+      <End Role="documentations" EntitySet="documentations" />
+      <End Role="documentations1" EntitySet="documentations" />
+    </AssociationSet>
+    <AssociationSet Name="documentcontents_ibfk_1" Association="Self.documentcontents_ibfk_1">
+      <End Role="documentations" EntitySet="documentations" />
+      <End Role="documentcontents" EntitySet="documentcontents" />
+    </AssociationSet>
+    <AssociationSet Name="documentuploads_ibfk_1" Association="Self.documentuploads_ibfk_1">
+      <End Role="documentations" EntitySet="documentations" />
+      <End Role="documentuploads" EntitySet="documentuploads" />
+    </AssociationSet>
+    <AssociationSet Name="educationalmaterials_ibfk_1" Association="Self.educationalmaterials_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="educationalmaterials" EntitySet="educationalmaterials" />
+    </AssociationSet>
+    <AssociationSet Name="educationalmaterials_ibfk_2" Association="Self.educationalmaterials_ibfk_2">
+      <End Role="educationalvisitcases" EntitySet="educationalvisitcases" />
+      <End Role="educationalmaterials" EntitySet="educationalmaterials" />
+    </AssociationSet>
+    <AssociationSet Name="educationalmaterials_ibfk_3" Association="Self.educationalmaterials_ibfk_3">
+      <End Role="organizations" EntitySet="organizations" />
+      <End Role="educationalmaterials" EntitySet="educationalmaterials" />
+    </AssociationSet>
+    <AssociationSet Name="educationalmaterials_ibfk_4" Association="Self.educationalmaterials_ibfk_4">
+      <End Role="people" EntitySet="people" />
+      <End Role="educationalmaterials" EntitySet="educationalmaterials" />
+    </AssociationSet>
+    <AssociationSet Name="educationalvisitattendees_ibfk_1" Association="Self.educationalvisitattendees_ibfk_1">
+      <End Role="educationalvisitcases" EntitySet="educationalvisitcases" />
+      <End Role="educationalvisitattendees" EntitySet="educationalvisitattendees" />
+    </AssociationSet>
+    <AssociationSet Name="educationalvisitcases_ibfk_1" Association="Self.educationalvisitcases_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="educationalvisitcases" EntitySet="educationalvisitcases" />
+    </AssociationSet>
+    <AssociationSet Name="educationalvisitcases_ibfk_2" Association="Self.educationalvisitcases_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="educationalvisitcases" EntitySet="educationalvisitcases" />
+    </AssociationSet>
+    <AssociationSet Name="educationalvisitcases_ibfk_3" Association="Self.educationalvisitcases_ibfk_3">
+      <End Role="people" EntitySet="people" />
+      <End Role="educationalvisitcases" EntitySet="educationalvisitcases" />
+    </AssociationSet>
+    <AssociationSet Name="educationalvisitcases_ibfk_4" Association="Self.educationalvisitcases_ibfk_4">
+      <End Role="organizations" EntitySet="organizations" />
+      <End Role="educationalvisitcases" EntitySet="educationalvisitcases" />
+    </AssociationSet>
+    <AssociationSet Name="events_ibfk_1" Association="Self.events_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="events" EntitySet="events" />
+    </AssociationSet>
+    <AssociationSet Name="events_ibfk_2" Association="Self.events_ibfk_2">
+      <End Role="systemtypes" EntitySet="systemtypes" />
+      <End Role="events" EntitySet="events" />
+    </AssociationSet>
+    <AssociationSet Name="events_ibfk_3" Association="Self.events_ibfk_3">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="events" EntitySet="events" />
+    </AssociationSet>
+    <AssociationSet Name="events_ibfk_4" Association="Self.events_ibfk_4">
+      <End Role="people" EntitySet="people" />
+      <End Role="events" EntitySet="events" />
+    </AssociationSet>
+    <AssociationSet Name="events_ibfk_5" Association="Self.events_ibfk_5">
+      <End Role="programsteps" EntitySet="programsteps" />
+      <End Role="events" EntitySet="events" />
+    </AssociationSet>
+    <AssociationSet Name="events_ibfk_6" Association="Self.events_ibfk_6">
+      <End Role="programsteps" EntitySet="programsteps" />
+      <End Role="events" EntitySet="events" />
+    </AssociationSet>
+    <AssociationSet Name="generalsettings_ibfk_1" Association="Self.generalsettings_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="generalsettings" EntitySet="generalsettings" />
+    </AssociationSet>
+    <AssociationSet Name="interventions_ibfk_1" Association="Self.interventions_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="interventions" EntitySet="interventions" />
+    </AssociationSet>
+    <AssociationSet Name="interventions_ibfk_2" Association="Self.interventions_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="interventions" EntitySet="interventions" />
+    </AssociationSet>
+    <AssociationSet Name="interventions_ibfk_3" Association="Self.interventions_ibfk_3">
+      <End Role="systemtypes" EntitySet="systemtypes" />
+      <End Role="interventions" EntitySet="interventions" />
+    </AssociationSet>
+    <AssociationSet Name="interventions_ibfk_4" Association="Self.interventions_ibfk_4">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="interventions" EntitySet="interventions" />
+    </AssociationSet>
+    <AssociationSet Name="interventions_ibfk_5" Association="Self.interventions_ibfk_5">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="interventions" EntitySet="interventions" />
+    </AssociationSet>
+    <AssociationSet Name="irrigationalcases_ibfk_1" Association="Self.irrigationalcases_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="irrigationalcases" EntitySet="irrigationalcases" />
+    </AssociationSet>
+    <AssociationSet Name="irrigationalcases_ibfk_2" Association="Self.irrigationalcases_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="irrigationalcases" EntitySet="irrigationalcases" />
+    </AssociationSet>
+    <AssociationSet Name="irrigationalcases_ibfk_3" Association="Self.irrigationalcases_ibfk_3">
+      <End Role="people" EntitySet="people" />
+      <End Role="irrigationalcases" EntitySet="irrigationalcases" />
+    </AssociationSet>
+    <AssociationSet Name="meterreads_ibfk_1" Association="Self.meterreads_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="meterreads" EntitySet="meterreads" />
+    </AssociationSet>
+    <AssociationSet Name="meterreads_ibfk_2" Association="Self.meterreads_ibfk_2">
+      <End Role="services" EntitySet="services" />
+      <End Role="meterreads" EntitySet="meterreads" />
+    </AssociationSet>
+    <AssociationSet Name="newslettercontacts_ibfk_1" Association="Self.newslettercontacts_ibfk_1">
+      <End Role="newsletters" EntitySet="newsletters" />
+      <End Role="newslettercontacts" EntitySet="newslettercontacts" />
+    </AssociationSet>
+    <AssociationSet Name="newslettercontacts_ibfk_2" Association="Self.newslettercontacts_ibfk_2">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="newslettercontacts" EntitySet="newslettercontacts" />
+    </AssociationSet>
+    <AssociationSet Name="organizations_ibfk_1" Association="Self.organizations_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="organizations" EntitySet="organizations" />
+    </AssociationSet>
+    <AssociationSet Name="paymenthistory_ibfk_1" Association="Self.paymenthistory_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="paymenthistory" EntitySet="paymenthistory" />
+    </AssociationSet>
+    <AssociationSet Name="people_ibfk_1" Association="Self.people_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="people" EntitySet="people" />
+    </AssociationSet>
+    <AssociationSet Name="peoplepeopletype_ibfk_1" Association="Self.peoplepeopletype_ibfk_1">
+      <End Role="people" EntitySet="people" />
+      <End Role="peoplepeopletype" EntitySet="peoplepeopletype" />
+    </AssociationSet>
+    <AssociationSet Name="peoplepeopletype_ibfk_2" Association="Self.peoplepeopletype_ibfk_2">
+      <End Role="peopletypes" EntitySet="peopletypes" />
+      <End Role="peoplepeopletype" EntitySet="peoplepeopletype" />
+    </AssociationSet>
+    <AssociationSet Name="phases_ibfk_1" Association="Self.phases_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="phases" EntitySet="phases" />
+    </AssociationSet>
+    <AssociationSet Name="phases_ibfk_2" Association="Self.phases_ibfk_2">
+      <End Role="programs" EntitySet="programs" />
+      <End Role="phases" EntitySet="phases" />
+    </AssociationSet>
+    <AssociationSet Name="programdevicemodels_ibfk_1" Association="Self.programdevicemodels_ibfk_1">
+      <End Role="programs" EntitySet="programs" />
+      <End Role="programdevicemodels" EntitySet="programdevicemodels" />
+    </AssociationSet>
+    <AssociationSet Name="programdevicemodels_ibfk_2" Association="Self.programdevicemodels_ibfk_2">
+      <End Role="devicemodels" EntitySet="devicemodels" />
+      <End Role="programdevicemodels" EntitySet="programdevicemodels" />
+    </AssociationSet>
+    <AssociationSet Name="programdevicetypes_ibfk_1" Association="Self.programdevicetypes_ibfk_1">
+      <End Role="programs" EntitySet="programs" />
+      <End Role="programdevicetypes" EntitySet="programdevicetypes" />
+    </AssociationSet>
+    <AssociationSet Name="programdevicetypes_ibfk_2" Association="Self.programdevicetypes_ibfk_2">
+      <End Role="devicetypes" EntitySet="devicetypes" />
+      <End Role="programdevicetypes" EntitySet="programdevicetypes" />
+    </AssociationSet>
+    <AssociationSet Name="programinterventiontypes_ibfk_1" Association="Self.programinterventiontypes_ibfk_1">
+      <End Role="programs" EntitySet="programs" />
+      <End Role="programinterventiontypes" EntitySet="programinterventiontypes" />
+    </AssociationSet>
+    <AssociationSet Name="programinterventiontypes_ibfk_2" Association="Self.programinterventiontypes_ibfk_2">
+      <End Role="systemtypes" EntitySet="systemtypes" />
+      <End Role="programinterventiontypes" EntitySet="programinterventiontypes" />
+    </AssociationSet>
+    <AssociationSet Name="programs_ibfk_1" Association="Self.programs_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="programs" EntitySet="programs" />
+    </AssociationSet>
+    <AssociationSet Name="programsteps_ibfk_1" Association="Self.programsteps_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="programsteps" EntitySet="programsteps" />
+    </AssociationSet>
+    <AssociationSet Name="programsteps_ibfk_2" Association="Self.programsteps_ibfk_2">
+      <End Role="programs" EntitySet="programs" />
+      <End Role="programsteps" EntitySet="programsteps" />
+    </AssociationSet>
+    <AssociationSet Name="programsteps_ibfk_3" Association="Self.programsteps_ibfk_3">
+      <End Role="systemtypes" EntitySet="systemtypes" />
+      <End Role="programsteps" EntitySet="programsteps" />
+    </AssociationSet>
+    <AssociationSet Name="programsteps_ibfk_4" Association="Self.programsteps_ibfk_4">
+      <End Role="systemtypes" EntitySet="systemtypes" />
+      <End Role="programsteps" EntitySet="programsteps" />
+    </AssociationSet>
+    <AssociationSet Name="properties_ibfk_1" Association="Self.properties_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="properties" EntitySet="properties" />
+    </AssociationSet>
+    <AssociationSet Name="properties_ibfk_2" Association="Self.properties_ibfk_2">
+      <End Role="people" EntitySet="people" />
+      <End Role="properties" EntitySet="properties" />
+    </AssociationSet>
+    <AssociationSet Name="propertiesservices_ibfk_1" Association="Self.propertiesservices_ibfk_1">
+      <End Role="properties" EntitySet="properties" />
+      <End Role="propertiesservices" EntitySet="propertiesservices" />
+    </AssociationSet>
+    <AssociationSet Name="propertiesservices_ibfk_2" Association="Self.propertiesservices_ibfk_2">
+      <End Role="services" EntitySet="services" />
+      <End Role="propertiesservices" EntitySet="propertiesservices" />
+    </AssociationSet>
+    <AssociationSet Name="propertyowners_ibfk_1" Association="Self.propertyowners_ibfk_1">
+      <End Role="properties" EntitySet="properties" />
+      <End Role="propertyowners" EntitySet="propertyowners" />
+    </AssociationSet>
+    <AssociationSet Name="propertyowners_ibfk_2" Association="Self.propertyowners_ibfk_2">
+      <End Role="people" EntitySet="people" />
+      <End Role="propertyowners" EntitySet="propertyowners" />
+    </AssociationSet>
+    <AssociationSet Name="regions_ibfk_1" Association="Self.regions_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="regions" EntitySet="regions" />
+    </AssociationSet>
+    <AssociationSet Name="savingsfactors_ibfk_1" Association="Self.savingsfactors_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="savingsfactors" EntitySet="savingsfactors" />
+    </AssociationSet>
+    <AssociationSet Name="savingsfactors_ibfk_2" Association="Self.savingsfactors_ibfk_2">
+      <End Role="devicetypes" EntitySet="devicetypes" />
+      <End Role="savingsfactors" EntitySet="savingsfactors" />
+    </AssociationSet>
+    <AssociationSet Name="savingsfactors_ibfk_3" Association="Self.savingsfactors_ibfk_3">
+      <End Role="systemtypes" EntitySet="systemtypes" />
+      <End Role="savingsfactors" EntitySet="savingsfactors" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_1" Association="Self.services_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="services" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="supporttickets_ibfk_1" Association="Self.supporttickets_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="supporttickets" EntitySet="supporttickets" />
+    </AssociationSet>
+    <AssociationSet Name="supporttickets_ibfk_2" Association="Self.supporttickets_ibfk_2">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="supporttickets" EntitySet="supporttickets" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_1" Association="Self.surveyareas_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_2" Association="Self.surveyareas_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_3" Association="Self.surveyareas_ibfk_3">
+      <End Role="interventions" EntitySet="interventions" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_4" Association="Self.surveyareas_ibfk_4">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_5" Association="Self.surveyareas_ibfk_5">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_6" Association="Self.surveyareas_ibfk_6">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_7" Association="Self.surveyareas_ibfk_7">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveyareas_ibfk_8" Association="Self.surveyareas_ibfk_8">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="surveyareas" EntitySet="surveyareas" />
+    </AssociationSet>
+    <AssociationSet Name="surveycases_ibfk_1" Association="Self.surveycases_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="surveycases" EntitySet="surveycases" />
+    </AssociationSet>
+    <AssociationSet Name="surveycases_ibfk_2" Association="Self.surveycases_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="surveycases" EntitySet="surveycases" />
+    </AssociationSet>
+    <AssociationSet Name="surveycases_ibfk_3" Association="Self.surveycases_ibfk_3">
+      <End Role="interventions" EntitySet="interventions" />
+      <End Role="surveycases" EntitySet="surveycases" />
+    </AssociationSet>
+    <AssociationSet Name="surveycases_ibfk_4" Association="Self.surveycases_ibfk_4">
+      <End Role="systemtypes" EntitySet="systemtypes" />
+      <End Role="surveycases" EntitySet="surveycases" />
+    </AssociationSet>
+    <AssociationSet Name="ticketattachments_ibfk_1" Association="Self.ticketattachments_ibfk_1">
+      <End Role="supporttickets" EntitySet="supporttickets" />
+      <End Role="ticketattachments" EntitySet="ticketattachments" />
+    </AssociationSet>
+    <AssociationSet Name="users_ibfk_1" Association="Self.users_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="violationcases_ibfk_1" Association="Self.violationcases_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="violationcases" EntitySet="violationcases" />
+    </AssociationSet>
+    <AssociationSet Name="violationcases_ibfk_2" Association="Self.violationcases_ibfk_2">
+      <End Role="cases" EntitySet="cases" />
+      <End Role="violationcases" EntitySet="violationcases" />
+    </AssociationSet>
+    <AssociationSet Name="violationcases_ibfk_3" Association="Self.violationcases_ibfk_3">
+      <End Role="people" EntitySet="people" />
+      <End Role="violationcases" EntitySet="violationcases" />
+    </AssociationSet>
+    <AssociationSet Name="violationcases_ibfk_4" Association="Self.violationcases_ibfk_4">
+      <End Role="people" EntitySet="people" />
+      <End Role="violationcases" EntitySet="violationcases" />
+    </AssociationSet>
+    <AssociationSet Name="violationcases_ibfk_5" Association="Self.violationcases_ibfk_5">
+      <End Role="violationcodes" EntitySet="violationcodes" />
+      <End Role="violationcases" EntitySet="violationcases" />
+    </AssociationSet>
+    <AssociationSet Name="violationcodes_ibfk_1" Association="Self.violationcodes_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="violationcodes" EntitySet="violationcodes" />
+    </AssociationSet>
+    <AssociationSet Name="waterrates_ibfk_1" Association="Self.waterrates_ibfk_1">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="waterrates" EntitySet="waterrates" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

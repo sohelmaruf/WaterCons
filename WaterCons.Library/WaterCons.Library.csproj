@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58F099D8-13CF-4426-8A0A-492E34692C03}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WaterCons.Library</RootNamespace>
+    <AssemblyName>WaterCons.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.8.8\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\ActivityLogBusinessService.cs" />
+    <Compile Include="Business\UserBusinessRules.cs" />
+    <Compile Include="Business\ContactBusinessRules.cs" />
+    <Compile Include="Business\ClientBusinessRules.cs" />
+    <Compile Include="Business\AdminBusinessRules.cs" />
+    <Compile Include="Business\AdminBusinessService.cs" />
+    <Compile Include="Business\ApplicationInitializationBusinessService.cs" />
+    <Compile Include="Business\ClientBusinessService.cs" />
+    <Compile Include="Business\UserBusinessService.cs" />
+    <Compile Include="Business\ContactBusinessService.cs" />
+    <Compile Include="Common\EmailSender.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\WebUtils.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="DataServices\AdminDataService.cs" />
+    <Compile Include="DataServices\ApplicationDataService.cs" />
+    <Compile Include="DataServices\ActivityLogDataService.cs" />
+    <Compile Include="DataServices\PackageDataService.cs" />
+    <Compile Include="DataServices\ClientDataService.cs" />
+    <Compile Include="DataServices\UserDataService.cs" />
+    <Compile Include="DataServices\ContactDataService.cs" />
+    <Compile Include="DataServices\EntityFrameworkDataService.cs" />
+    <Compile Include="Entity\AdminInfo.cs" />
+    <Compile Include="Entity\ApplicationInfo.cs" />
+    <Compile Include="Entity\ContactInfo.cs" />
+    <Compile Include="Entity\RegisterInfo.cs" />
+    <Compile Include="Entity\TransactionalInfo.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="Interfaces\IAdminDataService.cs" />
+    <Compile Include="Interfaces\IApplicationDataService.cs" />
+    <Compile Include="Interfaces\IActivityLogDataService.cs" />
+    <Compile Include="Interfaces\IPackageDataService.cs" />
+    <Compile Include="Interfaces\IClientDataService.cs" />
+    <Compile Include="Interfaces\IUserDataService.cs" />
+    <Compile Include="Interfaces\IContactDataService.cs" />
+    <Compile Include="Interfaces\Interfaces.cs" />
+    <Compile Include="Models\account.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\activitylog.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\advertisementcas.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\applicationmenu.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campaigncas.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campaignmaterial.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\case.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\casecontact.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\city.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\client.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\clientgridfield.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consumption.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\contact.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\device.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\deviceefficiencylevel.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\devicemodel.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\devicetype.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\documentation.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\documentcontent.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\documentupload.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\educationalmaterial.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\educationalvisitattendee.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\educationalvisitcas.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\event.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\generalsetting.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gridfield.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\intervention.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\irrigationalcas.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\listitem.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\meterread.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\newsletter.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\newslettercontact.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\organization.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\package.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\paymenthistory.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\peoplepeopletype.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\peopletype.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\person.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\phase.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\program.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\programdevicemodel.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\programdevicetype.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\programinterventiontype.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\programstep.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\propertiesservice.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\property.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\propertyowner.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\region.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\savingsfactor.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\service.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\servicetype.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\supportticket.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\surveyarea.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\surveycas.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\systemtype.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ticketattachment.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\violationcas.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\violationcode.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaterConsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaterConsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaterConsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaterConsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaterConsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\waterrate.cs">
+      <DependentUpon>WaterConsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\TransactionalInformation.cs" />
+    <Compile Include="Common\ValidationRules.cs" />
+    <Compile Include="Common\Validations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Models\WaterConsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WaterConsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\WaterConsModel.edmx.diagram">
+      <DependentUpon>WaterConsModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\WaterConsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WaterConsModel.edmx</DependentUpon>
+      <LastGenOutput>WaterConsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\WaterConsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WaterConsModel.edmx</DependentUpon>
+      <LastGenOutput>WaterConsModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\i18n\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
